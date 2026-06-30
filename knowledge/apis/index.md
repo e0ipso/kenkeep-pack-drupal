@@ -18,6 +18,5 @@ _None._
 - Open [**Validate JSON-RPC business methods**](practice-validate-jsonrpc-business-methods.md) to learn about: Advanced JSON-RPC methods should validate transitions, limits, file inputs, and storage errors explicitly. #http #jsonrpc #validation #errors
 
 ## Components (what exists)
-- Open [**JSON-RPC methods are attribute plugins**](map-jsonrpc-method-plugins.md) to learn about: The JSON-RPC API uses contrib method plugins declared with JsonRpcMethod and served through POST /jsonrpc. #http #jsonrpc #plugins
+- Open [**JSON-RPC methods are attribute plugins**](map-jsonrpc-method-plugins.md) to learn about: The JSON-RPC API uses contrib method plugins declared with JsonRpcMethod and served through /jsonrpc. #http #jsonrpc #plugins
 - Open [**REST resources are ResourceBase plugins**](map-rest-resource-plugins.md) to learn about: Custom REST endpoints live as Plugin\rest\resource classes with RestResource attributes and resource config. #http #rest #plugins
-

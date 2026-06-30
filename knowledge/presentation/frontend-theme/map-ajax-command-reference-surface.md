@@ -26,4 +26,4 @@ Server-side AJAX commands are PHP objects in Drupal\Core\Ajax that implement Com
 
 The documented command surface covers stylesheet and script injection, DOM insertion and removal, jQuery invocation, CSS changes, drupalSettings updates, messages and announcements, dialogs, off-canvas trays, redirects, tabledrag warnings, and form build id updates.
 
-Important behavior details: HtmlCommand replaces inner HTML while ReplaceCommand replaces the matched element itself; InvokeCommand calls jQuery methods; dialog commands require drupal.dialog.ajax; RedirectCommand sets window.location for a full page navigation, so do not rely on later commands after it.
+Important behavior details: HtmlCommand replaces inner HTML while ReplaceCommand replaces the matched element itself; InvokeCommand calls jQuery methods; dialog commands require core/drupal.dialog.ajax; RedirectCommand sets window.location for a full page navigation, so do not rely on later commands after it.

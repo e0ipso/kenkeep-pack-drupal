@@ -8,9 +8,9 @@ tags:
   - install
   - modules
 derived_from:
-  - "https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_install/11.x"
-  - "https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_schema/11.x"
-  - "https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_requirements/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Extension%21module.api.php/function/hook_install/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Database%21database.api.php/function/hook_schema/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Extension%21module.api.php/function/hook_requirements/11.x"
 relates_to:
   - map-layout-builder-companion-modules
   - map-advanced-drupal-service-patterns

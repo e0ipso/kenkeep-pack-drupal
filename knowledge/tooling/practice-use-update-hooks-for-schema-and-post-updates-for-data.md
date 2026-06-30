@@ -9,8 +9,8 @@ tags:
   - schema
 derived_from:
   - "https://www.drupal.org/docs/drupal-apis/update-api"
-  - "https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_update_N/11.x"
-  - "https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_post_update_NAME/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Extension%21module.api.php/function/hook_update_N/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Extension%21module.api.php/function/hook_post_update_NAME/11.x"
 relates_to:
   - map-advanced-drupal-service-patterns
   - map-ajax-command-reference-surface

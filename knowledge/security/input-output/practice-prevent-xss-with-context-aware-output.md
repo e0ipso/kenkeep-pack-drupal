@@ -9,8 +9,8 @@ tags:
   - rendering
   - drupal
 derived_from:
+  - https://www.drupal.org/docs/drupal-apis/render-api/render-arrays
   - https://www.drupal.org/docs/theming-drupal/twig-in-drupal
-  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21RenderElementBase.php/property/RenderElementBase%3A%3A%24properties/11.x
   - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Component%21Utility%21Xss.php/class/Xss/11.x
   - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Component%21Utility%21UrlHelper.php/class/UrlHelper/11.x
 relates_to:

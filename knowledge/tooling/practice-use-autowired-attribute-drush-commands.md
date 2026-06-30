@@ -25,4 +25,4 @@ For custom Drush commands, place command classes under `src/Drush/Commands/`, us
 
 Define command name, aliases, usage, and visibility with Symfony Console attributes, then define arguments and options in `configure()` unless using Symfony 7.4 invokable attributes. Use Drush attributes only for supported formatter/optionset/validation metadata. Inject services through the constructor; use explicit Symfony `#[Autowire(service: ...)]` only when an interface or service needs a specific service ID.
 
-With `AutowireTrait`, commands are auto-discovered and no `drush.services.yml` is needed.
+When the command matches Drush's discovery rules, `AutowireTrait` handles service injection and no `drush.services.yml` is needed.

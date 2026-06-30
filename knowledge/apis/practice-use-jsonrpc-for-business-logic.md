@@ -25,4 +25,4 @@ summary: >-
 ---
 Use JSON:API for entity CRUD and JSON-RPC for business logic that does not fit REST, such as cache clearing, workflows, and batch operations. JSON-RPC provides the `/jsonrpc` endpoint, JSON Schema parameter validation, and batch requests; method discovery at `/jsonrpc/methods` is provided by the `jsonrpc_discovery` submodule.
 
-Define methods with `JsonRpcMethodBase`, `#[JsonRpcMethod]`, `JsonRpcParameterDefinition`, and `ParameterBag`. Represent expected client failures with JSON-RPC errors such as `Error::invalidParams()`, and use method-level access attributes for required permissions when access can be expressed declaratively.
+Define methods with `JsonRpcMethodBase`, `#[JsonRpcMethod]`, `JsonRpcParameterDefinition`, and `JsonRpcObject\ParameterBag`. Represent expected client failures with JSON-RPC errors such as `Error::invalidParams()`, and use method-level `access` metadata for required permissions when access can be expressed declaratively.

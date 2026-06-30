@@ -19,7 +19,7 @@ depends_on: []
 confidence: medium
 summary: >-
   The JSON-RPC API uses contrib method plugins declared with JsonRpcMethod and
-  served through POST /jsonrpc.
+  served through /jsonrpc.
 ---
 JSON-RPC support requires the `drupal/jsonrpc` contrib module. Current 3.x methods are plugins using the `#[JsonRpcMethod]` attribute, an ID such as `mymodule.get_item`, usage text, optional parameter definitions, and an `execute(\Drupal\jsonrpc\JsonRpcObject\ParameterBag $params): mixed` method when parameters are accepted. Older 2.x examples may use annotations.
 
