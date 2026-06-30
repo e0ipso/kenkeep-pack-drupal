@@ -7,7 +7,10 @@ tags:
   - drupal
   - moderation
   - workflow
-derived_from: []
+derived_from:
+  - "https://api.drupal.org/api/drupal/core%21modules%21content_moderation%21src%21ModerationInformationInterface.php/interface/ModerationInformationInterface/11.x"
+  - "https://api.drupal.org/api/drupal/core%21modules%21content_moderation%21src%21StateTransitionValidationInterface.php/interface/StateTransitionValidationInterface/11.x"
+  - "https://api.drupal.org/api/drupal/core%21modules%21content_moderation%21src%21Permissions.php/class/Permissions/11.x"
 relates_to:
   - map-processing-workflow-moderation-map
   - map-advanced-drupal-service-patterns

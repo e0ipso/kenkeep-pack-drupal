@@ -7,7 +7,11 @@ tags:
   - drupal
   - render
   - elements
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/elements/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21HtmlTag.php/class/HtmlTag/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21Link.php/class/Link/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21RenderElementBase.php/class/RenderElementBase/11.x
 relates_to:
   - practice-build-render-arrays-with-cache-metadata
   - practice-define-layout-plugins-by-complexity

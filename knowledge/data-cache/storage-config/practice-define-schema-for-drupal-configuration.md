@@ -7,7 +7,9 @@ tags:
   - drupal
   - config
   - forms
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-schemametadata
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21ConfigFormBase.php/class/ConfigFormBase/11.x
 relates_to:
   - practice-prefer-config-target-for-settings-forms
   - map-drupal-entity-form-bases

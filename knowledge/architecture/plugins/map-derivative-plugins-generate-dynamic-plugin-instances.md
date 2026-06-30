@@ -7,7 +7,10 @@ tags:
   - drupal
   - plugins
   - derivatives
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/plugin-api/plugin-derivatives
+  - https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-entity-dependencies
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Component%21Plugin%21Derivative%21DeriverInterface.php/interface/DeriverInterface/11.x
 relates_to:
   - practice-alter-and-debug-plugin-definitions-through-managers
   - practice-build-configurable-and-context-aware-plugins-with-cache-contexts

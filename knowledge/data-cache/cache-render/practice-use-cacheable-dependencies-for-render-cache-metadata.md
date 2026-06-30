@@ -7,7 +7,9 @@ tags:
   - cache
   - render
   - drupal
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheableMetadata.php/class/CacheableMetadata/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21CacheableDependencyInterface.php/interface/CacheableDependencyInterface/11.x
 relates_to:
   - practice-build-render-arrays-with-cache-metadata
   - practice-vary-render-cache-with-cache-contexts

@@ -8,7 +8,10 @@ tags:
   - routing
   - ajax
   - dialogs
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Ajax%21OpenModalDialogCommand.php/class/OpenModalDialogCommand/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Ajax%21OpenDialogCommand.php/class/OpenDialogCommand/11.x
+  - https://www.drupal.org/node/3440844
 relates_to:
   - map-ajax-command-reference-surface
   - map-drupal-menu-navigation-yaml-files

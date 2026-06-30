@@ -8,7 +8,10 @@ tags:
   - assets
   - libraries
   - drupal
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/develop/creating-modules/adding-assets-css-js-to-a-drupal-module-via-librariesyml
+  - https://api.drupal.org/api/drupal/core%21core.libraries.yml/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Asset%21LibraryDiscoveryParser.php/class/LibraryDiscoveryParser/11.x
 relates_to:
   - map-ajax-command-reference-surface
   - practice-use-drupal-ajax-for-dynamic-interactions
@@ -19,7 +22,7 @@ summary: >-
   Define CSS and JS in libraries.yml and attach libraries where needed instead
   of loading assets globally.
 ---
-Define frontend assets in module libraries.yml files, including CSS, JavaScript, versions, options, and fully qualified dependencies such as core/drupal, core/drupalSettings, and core/once.
+Define frontend assets in extension `.libraries.yml` files, including CSS, JavaScript, versions, options, and fully qualified dependencies such as core/drupal, core/drupalSettings, and core/once.
 
 Attach libraries at the point of use with #attached in render arrays or forms, or attach_library() in Twig. Prefer conditional attachment for feature-specific or permission-specific assets instead of global loading.
 

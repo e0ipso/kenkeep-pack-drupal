@@ -7,7 +7,9 @@ tags:
   - drupal
   - paragraphs
   - content
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/paragraphs"
+  - "https://www.drupal.org/project/entity_reference_revisions"
 relates_to:
   - practice-align-content-entity-keys-with-base-fields
   - practice-keep-paragraphs-depth-and-revisions-under-control

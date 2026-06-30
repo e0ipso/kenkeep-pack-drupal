@@ -8,7 +8,10 @@ tags:
   - plugins
   - configuration
   - cache
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Plugin%21ContextAwarePluginInterface.php/interface/ContextAwarePluginInterface/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Plugin%21ContextAwarePluginTrait.php/trait/ContextAwarePluginTrait/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Block%21BlockPluginInterface.php/interface/BlockPluginInterface/11.x
 relates_to:
   - practice-set-cache-metadata-on-block-plugin-builds
   - map-derivative-plugins-generate-dynamic-plugin-instances

@@ -10,9 +10,8 @@ summary: plugin managers, plugin definitions, derivatives, attributes, actions, 
 _None._
 
 ## Conventions (how we build)
-- Open [**Handle negation in condition plugins**](practice-handle-negation-in-condition-plugins.md) to learn about: Condition plugin evaluate methods should account for negation and return summaries as TranslatableMarkup. #drupal #plugins #conditions
-- Open [**Use PHP attributes for modern Drupal plugins**](practice-use-php-attributes-for-modern-drupal-plugins.md) to learn about: Drupal 10.2+ plugins should prefer PHP attributes and modern class conventions over legacy annotations. #drupal #plugins #attributes
+- Open [**Handle negation in condition plugins**](practice-handle-negation-in-condition-plugins.md) to learn about: Condition plugin evaluate methods should account for negation and return translated summaries. #drupal #plugins #conditions
+- Open [**Use PHP attributes for modern Drupal plugins**](practice-use-php-attributes-for-modern-drupal-plugins.md) to learn about: Drupal 10.2+ plugin managers with attribute discovery should prefer PHP attributes and modern class conventions over legacy annotations. #drupal #plugins #attributes
 
 ## Components (what exists)
 - Open [**Derivative plugins generate dynamic plugin instances**](map-derivative-plugins-generate-dynamic-plugin-instances.md) to learn about: A deriver creates multiple plugin definitions from one base plugin using dynamic data. #drupal #plugins #derivatives
-

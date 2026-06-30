@@ -7,7 +7,10 @@ tags:
   - drupal
   - workflow
   - moderation
-derived_from: []
+derived_from:
+  - "https://api.drupal.org/api/drupal/core%21modules%21workflows%21src%21Attribute%21WorkflowType.php/class/WorkflowType/11.x"
+  - "https://api.drupal.org/api/drupal/core%21modules%21workflows%21src%21Plugin%21WorkflowTypeBase.php/class/WorkflowTypeBase/11.x"
+  - "https://api.drupal.org/api/drupal/core%21modules%21content_moderation%21src%21ModerationInformationInterface.php/interface/ModerationInformationInterface/11.x"
 relates_to:
   - practice-processing-content-moderation-workflow-guidance
   - practice-account-for-layout-builder-overrides

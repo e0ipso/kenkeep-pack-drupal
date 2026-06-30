@@ -7,7 +7,10 @@ tags:
   - drupal
   - fields
   - formatters
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/entity-api/fieldtypes-fieldwidgets-and-fieldformatters
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Field%21FormatterBase.php/class/FormatterBase/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Field%21FormatterInterface.php/function/FormatterInterface%3A%3AviewElements/11.x
 relates_to:
   - practice-computed-fields-are-computed-on-access
   - practice-field-types-define-storage-and-typed-data

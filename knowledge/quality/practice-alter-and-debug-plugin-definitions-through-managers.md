@@ -7,7 +7,10 @@ tags:
   - drupal
   - plugins
   - debugging
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Plugin%21Discovery%21AlterDecorator.php/class/AlterDecorator/11.x
+  - https://api.drupal.org/api/drupal/core%21modules%21block%21block.api.php/function/hook_block_alter/11.x
+  - https://www.drush.org/latest/generators/
 relates_to:
   - map-derivative-plugins-generate-dynamic-plugin-instances
   - map-drupal-mail-flow
@@ -18,8 +21,8 @@ summary: >-
   Use plugin alter hooks, Drush generators, and manager inspection commands for
   plugin definition work.
 ---
-Alter plugin definitions from other modules with the relevant plugin alteration hook, such as `block_alter` or a type-specific alter hook like `field_widget_info_alter`.
+Alter plugin definitions from other modules with the relevant plugin alter hook, such as `hook_block_alter()` or a type-specific alter hook like `hook_field_widget_info_alter()`.
 
-For plugin types not covered by dedicated documentation, use Drush generators such as `vendor/bin/drush generate plugin:queue-worker`, `plugin:condition`, field plugin generators, migrate plugin generators, and related plugin generators.
+For plugin types not covered by dedicated documentation, use Drush generators such as `vendor/bin/drush generate plugin:queue-worker`, `plugin:condition`, field plugin generators, migrate plugin generators, and related plugin generators. Confirm available generator names with `drush generate --list` because contrib and Drush versions can change the list.
 
 Debug plugin discovery with manager services: inspect definition keys, fetch an individual definition, and clear plugin caches with `drush cr` after plugin definition changes.

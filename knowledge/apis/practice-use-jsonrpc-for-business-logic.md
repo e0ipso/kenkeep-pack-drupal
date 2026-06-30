@@ -8,7 +8,11 @@ tags:
   - jsonrpc
   - api
   - workflow
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/jsonrpc"
+  - "https://git.drupalcode.org/project/jsonrpc/-/blob/3.0.1/jsonrpc.routing.yml"
+  - "https://git.drupalcode.org/project/jsonrpc/-/blob/3.0.1/modules/jsonrpc_discovery/jsonrpc_discovery.routing.yml"
+  - "https://git.drupalcode.org/project/jsonrpc/-/blob/3.0.1/src/JsonRpcObject/Error.php"
 relates_to:
   - map-jsonrpc-method-plugins
   - practice-guard-jsonrpc-entity-crud-access
@@ -19,6 +23,6 @@ summary: >-
   JSON-RPC is the documented fit for actions, workflows, batch operations, and
   other non-REST business behavior.
 ---
-Use JSON:API for entity CRUD and JSON-RPC for business logic that does not fit REST, such as cache clearing, workflows, and batch operations. JSON-RPC provides a single `/jsonrpc` endpoint, method discovery at `/jsonrpc/methods`, JSON Schema parameter validation, and batch requests.
+Use JSON:API for entity CRUD and JSON-RPC for business logic that does not fit REST, such as cache clearing, workflows, and batch operations. JSON-RPC provides the `/jsonrpc` endpoint, JSON Schema parameter validation, and batch requests; method discovery at `/jsonrpc/methods` is provided by the `jsonrpc_discovery` submodule.
 
 Define methods with `JsonRpcMethodBase`, `#[JsonRpcMethod]`, `JsonRpcParameterDefinition`, and `ParameterBag`. Represent expected client failures with JSON-RPC errors such as `Error::invalidParams()`, and use method-level access attributes for required permissions when access can be expressed declaratively.

@@ -7,7 +7,10 @@ tags:
   - drupal
   - routing
   - routes
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/routing-system/structure-of-routes
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21ParamConverter%21EntityConverter.php/class/EntityConverter/11.x
+  - https://api.drupal.org/api/drupal/core%21core.api.php/group/routing/11.x
 relates_to:
   - practice-custom-breadcrumb-builders
   - practice-drupal-redirect-programmatic-redirects-and-events

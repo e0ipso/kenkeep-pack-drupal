@@ -7,7 +7,9 @@ tags:
   - drupal
   - cache
   - render
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/cache-api/cache-contexts
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21Context%21CacheContextsManager.php/class/CacheContextsManager/11.x
 relates_to:
   - practice-build-render-arrays-with-cache-metadata
   - practice-use-cacheable-dependencies-for-render-cache-metadata

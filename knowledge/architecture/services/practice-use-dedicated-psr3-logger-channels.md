@@ -7,7 +7,10 @@ tags:
   - drupal
   - logging
   - services
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/8/api/logging-api/overview
+  - https://api.drupal.org/api/drupal/core%21core.services.yml/service/logger.channel_base/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Logger%21LoggerChannelInterface.php/interface/LoggerChannelInterface/11.x
 relates_to:
   - map-advanced-drupal-service-patterns
   - map-drupal-service-definitions-and-common-services

@@ -7,7 +7,9 @@ tags:
   - drupal
   - paragraphs
   - revisions
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/paragraphs"
+  - "https://www.drupal.org/project/entity_reference_revisions"
 relates_to:
   - map-paragraphs-advanced-layout-library-performance
   - map-paragraphs-structured-content-composition
@@ -18,6 +20,6 @@ summary: >-
   Paragraph fields should reference specific paragraph revisions so host
   revisions cascade to child revisions.
 ---
-Use Entity Reference Revisions for Paragraphs fields rather than standard entity references. A standard entity reference points to the latest revision, while ERR stores both `target_id` and `target_revision_id`.
+Use Entity Reference Revisions for Paragraphs fields rather than standard entity references. A standard entity reference stores `target_id`; ERR stores both `target_id` and `target_revision_id` so the host revision can reference the intended paragraph revision.
 
 This matters because paragraph revision tracking cascades from the host revision to the child paragraph revision. Loading `$item->entity` from the field item resolves the specific referenced paragraph revision.

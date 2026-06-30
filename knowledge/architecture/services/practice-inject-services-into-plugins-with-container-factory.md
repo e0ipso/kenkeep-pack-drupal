@@ -7,7 +7,10 @@ tags:
   - drupal
   - plugins
   - dependency-injection
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/dependency-injection-in-plugin-block
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Plugin%21ContainerFactoryPluginInterface.php/interface/ContainerFactoryPluginInterface/11.x
+  - https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-entity-dependencies
 relates_to:
   - map-derivative-plugins-generate-dynamic-plugin-instances
   - map-drupal-mail-flow

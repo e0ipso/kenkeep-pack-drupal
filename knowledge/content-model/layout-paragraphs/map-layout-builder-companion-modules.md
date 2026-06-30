@@ -7,7 +7,10 @@ tags:
   - drupal
   - layout
   - modules
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/layout_builder_restrictions"
+  - "https://www.drupal.org/project/layout_builder_styles"
+  - "https://www.drupal.org/project/layout_builder_component_attributes"
 relates_to:
   - practice-account-for-layout-builder-overrides
   - practice-define-layout-plugins-by-complexity

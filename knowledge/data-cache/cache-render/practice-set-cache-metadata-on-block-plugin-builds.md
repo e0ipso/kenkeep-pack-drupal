@@ -8,7 +8,9 @@ tags:
   - plugins
   - blocks
   - cache
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Block%21BlockPluginInterface.php/interface/BlockPluginInterface/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Block%21Attribute%21Block.php/class/Block/11.x
 relates_to:
   - practice-build-configurable-and-context-aware-plugins-with-cache-contexts
   - map-derivative-plugins-generate-dynamic-plugin-instances
@@ -21,6 +23,6 @@ summary: >-
 ---
 Block plugins live under `Plugin\Block` and use the `#[Block(...)]` attribute with values such as `id`, `admin_label`, and `category`.
 
-Always set `#cache` metadata in `build()`. Blocks are cached aggressively, so cache tags, contexts, or max-age should be part of the returned render array.
+Always provide cacheability metadata. Put it in the returned render array's `#cache` metadata or override the block plugin cache methods for cache tags, contexts, and max-age.
 
 Use `blockForm()` and `blockSubmit()` for block configuration. Use `context_definitions` in the block attribute when the block needs route or entity context, and have `blockAccess()` return an `AccessResultInterface`.

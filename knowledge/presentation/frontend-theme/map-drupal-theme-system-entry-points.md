@@ -7,7 +7,10 @@ tags:
   - drupal
   - theme
   - twig
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21includes%21theme.inc/function/hook_theme/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Template%21TwigExtension.php/class/TwigExtension/11.x
+  - https://www.drupal.org/docs/develop/theming-drupal/twig-in-drupal
 relates_to:
   - practice-account-for-layout-builder-overrides
   - practice-align-content-entity-keys-with-base-fields

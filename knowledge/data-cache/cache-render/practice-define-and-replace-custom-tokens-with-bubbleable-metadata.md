@@ -7,7 +7,9 @@ tags:
   - drupal
   - tokens
   - cache
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/develop/drupal-apis/token-api/token-api-hooks
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Utility%21Token.php/class/Token/11.x
 relates_to:
   - practice-token-replacements-must-carry-cache-metadata
   - practice-account-for-layout-builder-overrides

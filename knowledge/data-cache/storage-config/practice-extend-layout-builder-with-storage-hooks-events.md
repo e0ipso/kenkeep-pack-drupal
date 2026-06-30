@@ -7,7 +7,10 @@ tags:
   - drupal
   - layout
   - plugins
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/layout-api
+  - https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21SectionStorageInterface.php/interface/SectionStorageInterface/11.x
+  - https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Event%21LayoutBuilderEvents.php/class/LayoutBuilderEvents/11.x
 relates_to:
   - map-derivative-plugins-generate-dynamic-plugin-instances
   - map-drupal-mail-flow

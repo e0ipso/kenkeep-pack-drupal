@@ -7,7 +7,10 @@ tags:
   - drupal
   - drush
   - commands
-derived_from: []
+derived_from:
+  - "https://www.drush.org/14.x/commands/"
+  - "https://www.drush.org/14.x/dependency-injection/"
+  - "https://www.drush.org/14.x/output-formats-filters/"
 relates_to:
   - map-drupal-migrate-api-reference
   - practice-handle-drush-command-io-and-failures-explicitly
@@ -15,9 +18,9 @@ relates_to:
 depends_on: []
 confidence: medium
 summary: >-
-  Custom Drush commands should use PHP attributes, AutowireTrait, constructor
-  injection, and Symfony IO.
+  Custom Drush commands should use Symfony Console command classes,
+  AutowireTrait, constructor injection, and structured output helpers.
 ---
-Define custom Drush commands under `src/Drush/Commands` by extending `DrushCommands`, using `Drush\Attributes` for command metadata, and using `AutowireTrait` for automatic discovery and service injection.
+Define custom Drush commands under `src/Drush/Commands`. On Drush 13.7+/14, prefer one Symfony Console command class per file with `#[AsCommand]`, `configure()` for arguments/options, `execute()` for CLI flow, and `AutowireTrait` for service injection.
 
-Only add `drush.services.yml` when the command cannot use `AutowireTrait`; that service file is distinct from a module `.services.yml`. Use constructor injection for dependencies and `$this->io()` for Symfony console output.
+Drush attribute/annotation commandfiles and `DrushCommands` are legacy patterns in Drush 14. Only add `drush.services.yml` for old commandfiles that cannot use `AutowireTrait`; that service file is distinct from a module `.services.yml`. Use constructor injection for dependencies and Symfony Console or Drush formatter helpers for output.

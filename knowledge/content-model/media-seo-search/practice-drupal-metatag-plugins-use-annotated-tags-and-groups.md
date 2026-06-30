@@ -8,7 +8,9 @@ tags:
   - seo
   - metatag
   - plugins
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/metatag"
+  - "https://www.drupal.org/project/schema_metatag"
 relates_to:
   - practice-drupal-field-group-formatters-use-annotations
   - map-derivative-plugins-generate-dynamic-plugin-instances
@@ -19,4 +21,6 @@ summary: >-
   Metatag extensions add annotated tag and group plugins, then read effective
   tags through the metatag.manager service.
 ---
-Use drupal/metatag for SEO metadata. Custom tag plugins are discovered with @MetatagTag annotations and can extend bases such as MetaNameBase; custom admin grouping uses @MetatagGroup annotations and GroupBase. Groups organize tags in the admin UI. For image metadata, set the tag type to image. For Schema.org-oriented metadata, prefer the relevant Metatag submodules such as metatag_google_scholar where applicable. Programmatic consumers should use the metatag.manager service and tagsFromEntityWithDefaults($entity) to obtain entity tags with defaults applied. Metatag plugin discovery is annotation-based, not PHP 8 attributes.
+Use `drupal/metatag` for SEO metadata. Custom tag plugins are discovered with `@MetatagTag` annotations and can extend bases such as `MetaNameBase`; custom admin grouping uses `@MetatagGroup` annotations and `GroupBase`. Groups organize tags in the admin UI. For image metadata, set the tag type to `image`.
+
+For Schema.org structured data, use the `schema_metatag` project or a purpose-built Metatag integration rather than treating Google Scholar tags as the general Schema.org solution. Programmatic consumers should use the `metatag.manager` service and `tagsFromEntityWithDefaults($entity)` to obtain entity tags with defaults applied. Metatag plugin discovery is annotation-based, not PHP 8 attributes.

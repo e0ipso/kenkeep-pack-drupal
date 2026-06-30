@@ -8,7 +8,10 @@ tags:
   - deployment
   - checklist
   - drupal
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/docs/administering-a-drupal-site/security-in-drupal"
+  - "https://www.drupal.org/docs/develop/security"
+  - "https://www.drupal.org/security"
 relates_to:
   - map-drupal-security-patterns-by-context
   - practice-avoid-common-security-vulnerabilities

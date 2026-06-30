@@ -7,7 +7,10 @@ tags:
   - drupal
   - layout
   - render
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/docs/drupal-apis/layout-api/how-to-register-layouts"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Layout%21Attribute%21Layout.php/class/Layout/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Layout%21LayoutDefault.php/class/LayoutDefault/11.x"
 relates_to:
   - map-layout-builder-companion-modules
   - map-layout-builder-page-assembly

@@ -7,7 +7,9 @@ tags:
   - search
   - drupal
   - gotcha
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/search_api"
+  - "https://www.drupal.org/docs/8/modules/search-api/developer-documentation/create-custom-fields-using-a-custom-processor"
 relates_to:
   - map-search-api-concepts-and-extension-points
   - map-advanced-drupal-service-patterns
@@ -18,7 +20,7 @@ summary: >-
   Clear indexes after field changes, order processors carefully, and use Views
   for search pages.
 ---
-When working with Search API indexes, clear the index after field changes and pay attention to processor order.
+When working with Search API indexes, clear or reindex affected indexes after indexed field or processor configuration changes and pay attention to processor order.
 
 Use Views for search pages because it integrates with Search API.
 

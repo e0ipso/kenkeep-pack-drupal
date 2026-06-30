@@ -8,7 +8,10 @@ tags:
   - javascript
   - behaviors
   - security
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/javascript-api/javascript-api-overview
+  - https://api.drupal.org/api/drupal/core%21misc%21drupal.js/11.x
+  - https://git.drupalcode.org/project/drupal/-/blob/11.x/core/assets/vendor/once/once.js
 relates_to:
   - practice-use-drupal-ajax-for-dynamic-interactions
   - map-ajax-command-reference-surface

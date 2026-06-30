@@ -7,7 +7,9 @@ tags:
   - drupal
   - fields
   - widgets
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Field%21WidgetBase.php/class/WidgetBase/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Field%21WidgetInterface.php/interface/WidgetInterface/11.x
 relates_to:
   - practice-computed-fields-are-computed-on-access
   - practice-field-formatters-return-render-arrays

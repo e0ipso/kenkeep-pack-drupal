@@ -2,7 +2,7 @@
 
 General knowledge and best practices for Drupal projects
 
-Version: 1.0.0
+Version: 1.0.1
 
 ## Import
 

@@ -7,7 +7,10 @@ tags:
   - drupal
   - updates
   - schema
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/docs/drupal-apis/update-api"
+  - "https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_update_N/11.x"
+  - "https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_post_update_NAME/11.x"
 relates_to:
   - map-advanced-drupal-service-patterns
   - map-ajax-command-reference-surface
@@ -18,6 +21,6 @@ summary: >-
   Schema changes belong in numbered hook_update_N functions; data changes belong
   in named post updates.
 ---
-Use numbered `hook_update_N()` implementations for schema or configuration updates, and increment update numbers in sequence. Use named `hook_post_update_NAME()` implementations for data migrations that run once.
+Use numbered `hook_update_N()` implementations for schema updates and necessary update-time configuration changes, and increment update numbers in sequence. Use named `hook_post_update_NAME()` implementations for data migrations that run once.
 
-For long-running post updates, use the `$sandbox` array to track progress and set `$sandbox['#finished']`. Run updates with `ddev drush updatedb` and inspect pending updates with `ddev drush updatedb:status`.
+For long-running post updates, use the `$sandbox` array to track progress and set `$sandbox['#finished']`. Run updates with `drush updatedb` and inspect pending updates with `drush updatedb:status` (or `ddev drush ...` in DDEV).

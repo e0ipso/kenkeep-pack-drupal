@@ -7,7 +7,10 @@ tags:
   - database
   - entities
   - drupal
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/develop/drupal-apis/database-api
+  - https://www.drupal.org/docs/drupal-apis/entity-api
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Database%21Connection.php/class/Connection/11.x
 relates_to:
   - practice-use-database-api-sparingly-for-custom-tables
   - map-drupal-entity-form-bases

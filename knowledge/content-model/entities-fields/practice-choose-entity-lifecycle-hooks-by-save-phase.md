@@ -7,7 +7,8 @@ tags:
   - drupal
   - entities
   - hooks
-derived_from: []
+derived_from:
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21entity.api.php/group/entity_crud/11.x"
 relates_to:
   - map-drupal-entity-form-bases
   - map-typed-entity-wrapper-structure
@@ -16,8 +17,8 @@ depends_on: []
 confidence: medium
 summary: >-
   Use the entity lifecycle hook that matches the phase: presave, insert/update,
-  postsave, delete, load, or view.
+  predelete/delete, load, or view.
 ---
-Entity lifecycle hooks fire in the order `presave` then `insert` or `update` then `postsave`. Use `presave` for pre-save changes, `insert` for first-save side effects, `update` for post-update reactions, and `delete` for cleanup before deletion.
+Entity save hooks fire in the order `presave`, then `insert` for new entities or `update` for existing entities. Core has entity class `postSave()` methods, but no generic `hook_entity_postsave()` hook. Use `presave` for pre-storage changes and `insert` or `update` for side effects after the entity has been written.
 
-Use broad hooks such as `entity_presave` with explicit type and bundle guards. Treat `load` hooks sparingly because they affect load performance, and use `view` hooks for render-array changes before display.
+Use broad hooks such as `hook_entity_presave()` with explicit type and bundle guards. Use `predelete` for cleanup that must happen before deletion and `delete` for reactions after deletion. Treat `load` hooks sparingly because they affect load performance, and use `view` hooks for render-array changes before display.

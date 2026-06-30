@@ -7,7 +7,10 @@ tags:
   - i18n
   - strings
   - javascript
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21StringTranslation%21StringTranslationTrait.php/trait/StringTranslationTrait/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21StringTranslation%21TranslatableMarkup.php/class/TranslatableMarkup/11.x
+  - https://api.drupal.org/api/drupal/core%21misc%21drupal.js/11.x
 relates_to:
   - practice-content-translation-check-existing-translation-first
   - practice-use-drupal-ajax-for-dynamic-interactions

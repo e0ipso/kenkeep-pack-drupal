@@ -7,7 +7,9 @@ tags:
   - drupal
   - batch
   - processing
-derived_from: []
+derived_from:
+  - "https://api.drupal.org/api/drupal/core%21includes%21form.inc/group/batch/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Batch%21BatchBuilder.php/class/BatchBuilder/11.x"
 relates_to:
   - map-advanced-drupal-service-patterns
   - map-ajax-command-reference-surface

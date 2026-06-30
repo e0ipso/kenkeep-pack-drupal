@@ -7,7 +7,10 @@ tags:
   - drupal
   - routing
   - menus
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/menu-api/providing-module-defined-menu-links
+  - https://www.drupal.org/docs/drupal-apis/menu-api/providing-module-defined-local-tasks
+  - https://www.drupal.org/docs/drupal-apis/menu-api/providing-module-defined-local-actions
 relates_to:
   - practice-custom-breadcrumb-builders
   - practice-drupal-redirect-programmatic-redirects-and-events

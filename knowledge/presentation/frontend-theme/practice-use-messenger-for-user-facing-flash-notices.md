@@ -7,7 +7,9 @@ tags:
   - drupal
   - messenger
   - ux
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Messenger%21MessengerInterface.php/interface/MessengerInterface/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Messenger%21Messenger.php/class/Messenger/11.x
 relates_to:
   - map-advanced-drupal-service-patterns
   - map-ajax-command-reference-surface

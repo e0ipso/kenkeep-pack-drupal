@@ -7,7 +7,9 @@ tags:
   - search
   - drupal
   - api
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/search_api"
+  - "https://www.drupal.org/docs/8/modules/search-api/developer-documentation/create-custom-fields-using-a-custom-processor"
 relates_to:
   - practice-handle-search-api-indexing-gotchas
   - practice-processing-queue-api-operations
@@ -18,7 +20,7 @@ summary: >-
   Search API indexes content through indexes, servers, datasources, and
   processors.
 ---
-The Search API docs require `drupal/search_api` and define the core vocabulary: an index defines what content to index, a server provides the backend such as Database, Solr, or Elasticsearch, a datasource identifies the content type or entities to index, and a processor transforms indexed data.
+The Search API module provides the indexing framework: an index defines what content to index, a server provides the backend such as Database, Solr, or Elasticsearch, a datasource identifies the content or other data to index, and a processor transforms indexed data.
 
 Search queries are built from an index query object, with keys, conditions, sorting, ranges, and result items whose original objects can be loaded from each result item.
 

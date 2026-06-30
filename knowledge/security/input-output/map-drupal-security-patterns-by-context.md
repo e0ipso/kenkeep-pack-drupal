@@ -7,7 +7,10 @@ tags:
   - security
   - patterns
   - drupal
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/security-api
+  - https://www.drupal.org/docs/administering-a-drupal-site/security-in-drupal
+  - https://www.drupal.org/security
 relates_to:
   - practice-avoid-common-security-vulnerabilities
   - practice-handle-files-securely

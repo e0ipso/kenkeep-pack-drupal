@@ -7,7 +7,10 @@ tags:
   - drupal
   - media
   - services
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21modules%21media_library%21src%21MediaLibraryOpenerInterface.php/interface/MediaLibraryOpenerInterface/11.x
+  - https://api.drupal.org/api/drupal/core%21modules%21media_library%21src%21MediaLibraryState.php/class/MediaLibraryState/11.x
+  - https://git.drupalcode.org/project/drupal/-/blob/11.x/core/modules/media_library/media_library.services.yml
 relates_to:
   - map-advanced-drupal-service-patterns
   - map-drupal-service-definitions-and-common-services

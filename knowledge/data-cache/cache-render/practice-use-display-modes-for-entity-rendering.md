@@ -7,7 +7,10 @@ tags:
   - drupal
   - render
   - display
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/entity-api/display-modes-view-modes-and-form-modes
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21EntityViewBuilderInterface.php/interface/EntityViewBuilderInterface/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21EntityDisplayRepositoryInterface.php/interface/EntityDisplayRepositoryInterface/11.x
 relates_to:
   - map-non-form-render-element-types
   - practice-build-render-arrays-with-cache-metadata

@@ -8,7 +8,10 @@ tags:
   - routing
   - urls
   - links
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Url.php/class/Url/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Link.php/class/Link/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21EntityBase.php/function/EntityBase%3A%3AtoUrl/11.x
 relates_to:
   - map-drupal-menu-navigation-yaml-files
   - map-drupal-route-definition-structure

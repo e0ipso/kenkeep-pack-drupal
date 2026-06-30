@@ -7,7 +7,10 @@ tags:
   - state
   - keyvalue
   - storage
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/develop/drupal-apis/state-api/state-api-overview
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21State%21State.php/class/State/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21KeyValueStore%21KeyValueFactoryInterface.php/interface/KeyValueFactoryInterface/11.x
 relates_to:
   - map-data-storage-api-purposes
   - practice-keep-runtime-storage-out-of-config-export

@@ -7,7 +7,11 @@ tags:
   - drupal
   - layout
   - content
-derived_from: []
+derived_from:
+  - "https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Section.php/class/Section/11.x"
+  - "https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21SectionComponent.php/class/SectionComponent/11.x"
+  - "https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21DefaultsSectionStorage.php/class/DefaultsSectionStorage/11.x"
+  - "https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21OverridesSectionStorage.php/class/OverridesSectionStorage/11.x"
 relates_to:
   - practice-account-for-layout-builder-overrides
   - practice-align-content-entity-keys-with-base-fields

@@ -8,7 +8,10 @@ tags:
   - cron
   - locks
   - state
-derived_from: []
+derived_from:
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Lock%21LockBackendInterface.php/interface/LockBackendInterface/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21State%21StateInterface.php/interface/StateInterface/11.x"
+  - "https://www.drupal.org/project/ultimate_cron"
 relates_to:
   - map-media-library-state-vocabulary
   - practice-processing-cron-basic-patterns

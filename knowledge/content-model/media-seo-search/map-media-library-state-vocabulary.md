@@ -7,7 +7,9 @@ tags:
   - drupal
   - media
   - state
-derived_from: []
+derived_from:
+  - "https://api.drupal.org/api/drupal/core%21modules%21media_library%21src%21MediaLibraryState.php/class/MediaLibraryState/11.x"
+  - "https://api.drupal.org/api/drupal/core%21modules%21media_library%21src%21Plugin%21Field%21FieldWidget%21MediaLibraryWidget.php/class/MediaLibraryWidget/11.x"
 relates_to:
   - practice-entity-browser-integration-gotchas
   - practice-extend-addformbase-for-custom-media-add-forms

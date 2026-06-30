@@ -7,7 +7,9 @@ tags:
   - drupal
   - cache
   - invalidation
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/cache-api/cache-tags
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Cache%21Cache.php/function/Cache%3A%3AinvalidateTags/11.x
 relates_to:
   - practice-account-for-layout-builder-overrides
   - practice-build-configurable-and-context-aware-plugins-with-cache-contexts

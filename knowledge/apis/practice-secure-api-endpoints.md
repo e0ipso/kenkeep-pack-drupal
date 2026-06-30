@@ -8,7 +8,10 @@ tags:
   - api
   - validation
   - auth
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/docs/administering-a-drupal-site/security-in-drupal"
+  - "https://www.drupal.org/docs/drupal-apis/routing-system/access-checking-on-routes"
+  - "https://www.drupal.org/docs/develop/security/cross-site-request-forgery"
 relates_to:
   - practice-validate-input-server-side
   - map-drupal-security-patterns-by-context

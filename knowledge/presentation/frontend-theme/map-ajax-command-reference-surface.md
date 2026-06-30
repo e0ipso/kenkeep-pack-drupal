@@ -8,7 +8,10 @@ tags:
   - ajax
   - reference
   - drupal
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21core.api.php/group/ajax/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Ajax%21CommandInterface.php/interface/CommandInterface/11.x
+  - https://api.drupal.org/api/drupal/core%21misc%21ajax.js/11.x
 relates_to:
   - practice-use-drupal-ajax-for-dynamic-interactions
   - practice-attach-frontend-assets-through-libraries
@@ -23,4 +26,4 @@ Server-side AJAX commands are PHP objects in Drupal\Core\Ajax that implement Com
 
 The documented command surface covers stylesheet and script injection, DOM insertion and removal, jQuery invocation, CSS changes, drupalSettings updates, messages and announcements, dialogs, off-canvas trays, redirects, tabledrag warnings, and form build id updates.
 
-Important behavior details: HtmlCommand replaces inner HTML while ReplaceCommand replaces the matched element itself; InvokeCommand calls jQuery methods; dialog commands require drupal.dialog.ajax; RedirectCommand performs a full page navigation and abandons remaining queued commands.
+Important behavior details: HtmlCommand replaces inner HTML while ReplaceCommand replaces the matched element itself; InvokeCommand calls jQuery methods; dialog commands require drupal.dialog.ajax; RedirectCommand sets window.location for a full page navigation, so do not rely on later commands after it.

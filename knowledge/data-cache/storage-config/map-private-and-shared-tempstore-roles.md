@@ -7,7 +7,9 @@ tags:
   - tempstore
   - storage
   - forms
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21TempStore%21PrivateTempStore.php/class/PrivateTempStore/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21TempStore%21SharedTempStore.php/class/SharedTempStore/11.x
 relates_to:
   - practice-clean-up-tempstore-data-after-workflows
   - practice-define-schema-for-drupal-configuration

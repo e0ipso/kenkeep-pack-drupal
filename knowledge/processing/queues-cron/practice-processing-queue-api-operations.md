@@ -7,7 +7,9 @@ tags:
   - drupal
   - queue
   - api
-derived_from: []
+derived_from:
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Queue%21QueueFactory.php/class/QueueFactory/11.x"
+  - "https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Queue%21QueueInterface.php/interface/QueueInterface/11.x"
 relates_to:
   - map-search-api-concepts-and-extension-points
   - practice-match-queue-worker-id-to-queue-name
@@ -18,4 +20,4 @@ summary: >-
   Manual Drupal queue code must explicitly create, claim, delete, release, and
   count items; claimed items remain until deleted or released.
 ---
-Create queues through QueueFactory injection rather than static access in services, then add work with createItem(). Manual processors should claim an item with a lease time, process $item->data, delete the item only after success, and release it on retryable exceptions. claimItem() returns FALSE when the queue is empty, numberOfItems() provides a count, and reliable queues can be requested with the reliable flag when persistence and stronger delivery semantics are needed.
+Create queues through QueueFactory injection rather than static access in services, then add work with createItem(). Manual processors should claim an item with a lease time, process $item->data, delete the item only after success, and release it on retryable exceptions. claimItem() returns FALSE when the queue is empty or cannot claim an item, numberOfItems() provides a best-effort count, and reliable queues can be requested with the reliable flag when ordering and at-least-once execution are more important than scalability.

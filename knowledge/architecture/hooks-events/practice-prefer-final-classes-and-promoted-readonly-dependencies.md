@@ -7,7 +7,9 @@ tags:
   - drupal
   - php
   - classes
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/services-and-dependency-injection-in-drupal
+  - https://www.drupal.org/node/3442349
 relates_to:
   - map-advanced-drupal-service-patterns
   - map-ajax-command-reference-surface

@@ -8,7 +8,10 @@ tags:
   - routing
   - breadcrumbs
   - cache
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Breadcrumb%21BreadcrumbBuilderInterface.php/interface/BreadcrumbBuilderInterface/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Breadcrumb%21BreadcrumbManager.php/class/BreadcrumbManager/11.x
+  - https://api.drupal.org/api/drupal/core%21modules%21system%21src%21PathBasedBreadcrumbBuilder.php/class/PathBasedBreadcrumbBuilder/11.x
 relates_to:
   - practice-parameter-converters-and-breadcrumb-priority
   - practice-route-access-requirements-and-cacheability
@@ -21,6 +24,6 @@ summary: >-
 ---
 Drupal's default `PathBasedBreadcrumbBuilder` derives breadcrumbs from the URL path at priority 0. Add a custom `BreadcrumbBuilderInterface` implementation when a route needs a different trail.
 
-In `applies()`, add cache contexts to the provided `CacheableMetadata` for every condition that affects the builder selection. In `build()`, add links and cache metadata to the returned `Breadcrumb`, including route context and cacheable dependencies such as loaded entities.
+When builder selection varies, accept the optional `CacheableMetadata` argument that `BreadcrumbManager` passes to `applies()` and add selection metadata there. In `build()`, add links and cache metadata to the returned `Breadcrumb`, including route context and cacheable dependencies such as loaded entities.
 
 Register the builder with the explicit `breadcrumb_builder` service tag. Higher priorities are checked first, and the first builder whose `applies()` returns `TRUE` wins; the tag is not autoconfigured.

@@ -7,7 +7,9 @@ tags:
   - drupal
   - services
   - di
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/structure-of-a-service-file
+  - https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/altering-existing-services-providing-dynamic-services
 relates_to:
   - map-drupal-service-definitions-and-common-services
   - practice-cache-computed-service-data-with-cachebackendinterface

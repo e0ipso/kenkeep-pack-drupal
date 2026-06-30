@@ -7,7 +7,10 @@ tags:
   - drush
   - commands
   - cli
-derived_from: []
+derived_from:
+  - "https://www.drush.org/14.x/commands/"
+  - "https://www.drush.org/14.x/output-formats-filters/"
+  - "https://github.com/drush-ops/drush/blob/14.x/includes/batch.inc"
 relates_to:
   - practice-define-drush-commands-with-attributes-and-autowiring
   - practice-use-autowired-attribute-drush-commands
@@ -15,11 +18,11 @@ relates_to:
 depends_on: []
 confidence: medium
 summary: >-
-  Use Drush output helpers, confirmations, structured rows, batches, validation
-  hooks, and exit codes for CLI behavior.
+  Use Symfony or Drush output helpers, confirmations, structured rows, batches,
+  validation, and exit codes for CLI behavior.
 ---
-Custom Drush commands should use Drush and Symfony console helpers for user interaction and output. Use `$this->io()`, `$this->output()`, and `$this->logger()` instead of ad hoc output, and return structured data such as `RowsOfFields` when callers may request table, JSON, YAML, or CSV output.
+Custom Drush commands should use Symfony Console IO and Drush formatter helpers for user interaction and output. In legacy `DrushCommands` commandfiles, `$this->io()`, `$this->output()`, and `$this->logger()` remain available; in current Symfony Console commands, use `SymfonyStyle`, injected logging, `FormatterTrait`, and structured data such as `RowsOfFields` when callers may request table, JSON, YAML, or CSV output.
 
 For destructive operations, prompt for confirmation and abort with `UserAbortException` when the user declines. For large imports or processing jobs, wire commands through Drupal batch operations and `drush_backend_batch_process()`.
 
-Validate command input through validation hooks when arguments refer to plugin IDs or other constrained project values, and return `CommandResult` with success or failure exit codes when checks can fail.
+Validate command input in `configure()`, `interact()`, `execute()`, or Drush validation attributes/listeners when arguments refer to plugin IDs or other constrained project values, and return `Command::SUCCESS` or `Command::FAILURE` exit codes when checks can fail.

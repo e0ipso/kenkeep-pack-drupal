@@ -7,7 +7,11 @@ tags:
   - storage
   - state
   - cache
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/develop/drupal-apis/state-api/state-api-overview
+  - https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-api-overview
+  - https://www.drupal.org/docs/drupal-apis/cache-api
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21TempStore%21PrivateTempStore.php/class/PrivateTempStore/11.x
 relates_to:
   - practice-do-not-write-directly-to-state-key-value-collection
   - practice-keep-runtime-storage-out-of-config-export

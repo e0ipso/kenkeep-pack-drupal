@@ -7,7 +7,10 @@ tags:
   - drupal
   - plugins
   - services
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/drupal-apis/plugin-api/creating-your-own-plugin-manager
+  - https://www.drupal.org/docs/drupal-apis/plugin-api/attribute-based-plugins
+  - https://api.drupal.org/api/drupal/core%21core.services.yml/service/default_plugin_manager/11.x
 relates_to:
   - map-advanced-drupal-service-patterns
   - map-derivative-plugins-generate-dynamic-plugin-instances

@@ -7,7 +7,10 @@ tags:
   - drupal
   - sdc
   - components
-derived_from: []
+derived_from:
+  - https://www.drupal.org/docs/develop/theming-drupal/using-single-directory-components
+  - https://api.drupal.org/api/drupal/core%21modules%21sdc%21src%21Element%21ComponentElement.php/class/ComponentElement/11.x
+  - https://api.drupal.org/api/drupal/core%21modules%21sdc%21src%21Component%21ComponentMetadata.php/class/ComponentMetadata/11.x
 relates_to:
   - practice-account-for-layout-builder-overrides
   - practice-align-content-entity-keys-with-base-fields

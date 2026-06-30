@@ -7,7 +7,10 @@ tags:
   - forms
   - ajax
   - drupal
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21core.api.php/group/ajax/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Ajax%21AjaxResponse.php/class/AjaxResponse/11.x
+  - https://api.drupal.org/api/drupal/core%21misc%21ajax.js/11.x
 relates_to:
   - map-ajax-command-reference-surface
   - map-drupal-entity-form-bases
@@ -22,4 +25,4 @@ For AJAX-enabled Drupal forms, attach #ajax to the triggering element, make its 
 
 Use AjaxResponse commands such as ReplaceCommand, HtmlCommand, InvokeCommand, AlertCommand, RedirectCommand, and modal commands when a callback needs multiple client-side effects. For add/remove controls, skip validation with #limit_validation_errors => [] when appropriate, update form state, and call setRebuild().
 
-Outside forms, use Drupal.ajax() for dynamic interactions instead of raw fetch() with custom JSON controllers.
+Outside forms, prefer Drupal.ajax() when the server should return Drupal AjaxResponse commands. Use JSON endpoints or fetch deliberately for API-style data flows where custom client rendering, cacheability, and error handling are part of the design.

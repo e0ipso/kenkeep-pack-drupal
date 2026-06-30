@@ -8,7 +8,10 @@ tags:
   - jsonrpc
   - validation
   - errors
-derived_from: []
+derived_from:
+  - "https://git.drupalcode.org/project/jsonrpc/-/blob/3.0.1/src/Exception/JsonRpcException.php"
+  - "https://git.drupalcode.org/project/jsonrpc/-/blob/3.0.1/src/JsonRpcObject/Error.php"
+  - "https://git.drupalcode.org/project/jsonrpc/-/blob/3.0.1/src/JsonRpcObject/ParameterBag.php"
 relates_to:
   - map-jsonrpc-method-plugins
   - practice-guard-jsonrpc-entity-crud-access

@@ -7,7 +7,10 @@ tags:
   - forms
   - drupal
   - reference
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21core.api.php/group/form_api/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21ConfigFormBase.php/class/ConfigFormBase/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21ConfigTarget.php/class/ConfigTarget/11.x
 relates_to:
   - practice-define-schema-for-drupal-configuration
   - practice-entity-browser-integration-gotchas
@@ -20,6 +23,6 @@ summary: >-
 ---
 The forms documentation maps common Drupal form classes and patterns: ConfigFormBase for settings forms, FormBase for custom standalone forms, ConfirmFormBase for confirmation flows, and FormStateInterface for values, errors, redirects, and rebuild state.
 
-Settings forms can bind elements to configuration with #config_target, including nested keys and ConfigTarget transforms for values such as newline-separated textarea input to arrays. With #config_target, a submitForm() override is not needed for basic config saving.
+Settings forms can bind elements to configuration with #config_target, including nested keys and ConfigTarget transforms for values such as newline-separated textarea input to arrays. With ConfigFormBase's default submit handling, a submitForm() override is not needed for basic #config_target saving.
 
 The same reference lists common element types, common render properties such as #required, #default_value, #access, #states, #prefix/#suffix, and validation patterns for both form-level and element-level validators.

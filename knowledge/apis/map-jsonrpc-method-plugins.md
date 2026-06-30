@@ -7,7 +7,10 @@ tags:
   - http
   - jsonrpc
   - plugins
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/jsonrpc"
+  - "https://git.drupalcode.org/project/jsonrpc/-/blob/3.0.1/src/Attribute/JsonRpcMethod.php"
+  - "https://git.drupalcode.org/project/jsonrpc/-/blob/3.0.1/src/JsonRpcObject/ParameterBag.php"
 relates_to:
   - practice-guard-jsonrpc-entity-crud-access
   - practice-test-jsonrpc-through-handler-and-http
@@ -18,6 +21,6 @@ summary: >-
   The JSON-RPC API uses contrib method plugins declared with JsonRpcMethod and
   served through POST /jsonrpc.
 ---
-JSON-RPC support requires the `drupal/jsonrpc` contrib module. Methods are implemented as plugins using the `#[JsonRpcMethod]` attribute, an ID such as `mymodule.get_item`, usage text, optional parameter definitions, and an `execute(ParameterBag $params): mixed` method.
+JSON-RPC support requires the `drupal/jsonrpc` contrib module. Current 3.x methods are plugins using the `#[JsonRpcMethod]` attribute, an ID such as `mymodule.get_item`, usage text, optional parameter definitions, and an `execute(\Drupal\jsonrpc\JsonRpcObject\ParameterBag $params): mixed` method when parameters are accepted. Older 2.x examples may use annotations.
 
-Clients call methods with JSON-RPC 2.0 payloads via `POST /jsonrpc` using `Content-Type: application/json`. The main documented implementation points are `web/modules/contrib/jsonrpc/src/MethodInterface.php`, `Attribute/JsonRpcMethod.php`, `Object/ParameterBag.php`, and `Controller/HttpController.php`.
+Clients normally call methods with JSON-RPC 2.0 payloads via `/jsonrpc` using `Content-Type: application/json`. The main current implementation points are `src/MethodInterface.php`, `src/Attribute/JsonRpcMethod.php`, `src/JsonRpcObject/ParameterBag.php`, and `src/Controller/HttpController.php`.

@@ -7,7 +7,10 @@ tags:
   - forms
   - hooks
   - validation
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21form.api.php/function/hook_form_alter/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21form.api.php/function/hook_form_BASE_FORM_ID_alter/11.x
+  - https://api.drupal.org/api/drupal/core%21misc%21states.es6.js/11.x
 relates_to:
   - practice-validate-input-server-side
   - map-drupal-entity-form-bases

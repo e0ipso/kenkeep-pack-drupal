@@ -7,7 +7,10 @@ tags:
   - drupal
   - paragraphs
   - performance
-derived_from: []
+derived_from:
+  - "https://www.drupal.org/project/paragraphs"
+  - "https://www.drupal.org/project/entity_reference_revisions"
+  - "https://www.drupal.org/project/layout_paragraphs"
 relates_to:
   - map-paragraphs-advanced-layout-library-performance
   - map-paragraphs-structured-content-composition
@@ -15,11 +18,11 @@ relates_to:
 depends_on: []
 confidence: high
 summary: >-
-  Limit nesting, manage ERR revision growth, and choose widget modes that keep
+  Limit nesting, plan for ERR revision growth, and choose widget modes that keep
   large paragraph forms usable.
 ---
-Keep Paragraphs nesting shallow for performance. The documented good shape is `node -> paragraph -> paragraph`, while three or more nesting levels should be avoided because of query performance.
+Keep Paragraphs nesting shallow for performance. A workable shape is `node -> paragraph -> paragraph`; deeper nesting should be justified because revision loading and editing forms become more expensive.
 
-Entity Reference Revisions creates new paragraph revisions on every host save, so projects may need cron or presave cleanup to limit retained paragraph revisions. Large paragraph forms may also need relevant Paragraphs patches.
+Entity Reference Revisions can grow paragraph revision history as host content is revised. Plan retention with a reference-aware cleanup strategy; do not delete paragraph revisions blindly because older host revisions may still point at them. Large paragraph forms may also need module updates, patches, or simpler component models.
 
-For many paragraphs, set the form display widget mode to `closed` so items are collapsed by default; `preview` shows rendered previews, and `edit` keeps items expanded.
+For many paragraphs, set the form display widget's default edit mode to `closed` so items are collapsed by default; `preview` shows rendered previews, and `open` keeps edit forms expanded.

@@ -7,7 +7,10 @@ tags:
   - drupal
   - mail
   - plugins
-derived_from: []
+derived_from:
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Mail%21MailManagerInterface.php/function/MailManagerInterface%3A%3Amail/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Mail%21MailManager.php/function/MailManager%3A%3AgetInstance/11.x
+  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Mail%21Plugin%21Mail%21TestMailCollector.php/class/TestMailCollector/11.x
 relates_to:
   - practice-alter-and-debug-plugin-definitions-through-managers
   - practice-build-configurable-and-context-aware-plugins-with-cache-contexts
@@ -22,4 +25,4 @@ Drupal mail is sent through the `plugin.manager.mail` service. `MailManager::mai
 
 Mail plugins implement `MailInterface::format()` and `MailInterface::mail()`. The `system.mail` configuration routes specific message IDs, module-wide messages, or the default route to plugins such as `php_mail`, custom mailers, or `null_mail`.
 
-In tests, outgoing mail is captured in state under `system.test_mail_collector` instead of being sent.
+When the core test mail collector is configured, outgoing mail is captured in state under `system.test_mail_collector` instead of being sent.
