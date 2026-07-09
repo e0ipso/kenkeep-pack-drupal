@@ -1,29 +1,50 @@
 ---
-schema_version: 2
-id: map-layout-builder-page-assembly
+type: map
 title: Layout Builder Assembles Pages From Sections And Components
-kind: map
+description: >-
+  Layout Builder manages visual page assembly with sections, components,
+  defaults, and optional per-entity overrides.
 tags:
   - drupal
   - layout
   - content
-derived_from:
-  - "https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Section.php/class/Section/11.x"
-  - "https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21SectionComponent.php/class/SectionComponent/11.x"
-  - "https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21DefaultsSectionStorage.php/class/DefaultsSectionStorage/11.x"
-  - "https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21OverridesSectionStorage.php/class/OverridesSectionStorage/11.x"
-relates_to:
+kk_schema_version: 3
+kk_id: map-layout-builder-page-assembly
+kk_derived_from:
+  - >-
+    https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Section.php/class/Section/11.x
+  - >-
+    https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21SectionComponent.php/class/SectionComponent/11.x
+  - >-
+    https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21DefaultsSectionStorage.php/class/DefaultsSectionStorage/11.x
+  - >-
+    https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21OverridesSectionStorage.php/class/OverridesSectionStorage/11.x
+kk_relates_to:
   - practice-account-for-layout-builder-overrides
   - practice-align-content-entity-keys-with-base-fields
   - practice-define-layout-plugins-by-complexity
-depends_on: []
-confidence: high
-summary: >-
-  Layout Builder manages visual page assembly with sections, components,
-  defaults, and optional per-entity overrides.
+kk_depends_on: []
+kk_confidence: high
 ---
 Layout Builder is the core Drupal module for visual page assembly, placing drag-and-drop blocks into layout regions. It is used for content type defaults, per-entity overrides, and landing pages.
 
 Layout Builder stores default layouts on entity view display configuration through `DefaultsSectionStorage`; per-entity layouts use `OverridesSectionStorage` and entity field storage. A `Section` contains the layout plugin, layout settings, and `SectionComponent` block instances assigned to regions.
 
 Enable it from `/admin/structure/types/manage/{type}/display` by turning on `Use Layout Builder`; only enable per-content customization when individual entity overrides are needed.
+
+<!-- kk:related:start -->
+# Related
+
+- Related: [practice-account-for-layout-builder-overrides](/drupal/data-cache/cache-render/practice-account-for-layout-builder-overrides.md)
+- Related: [practice-align-content-entity-keys-with-base-fields](/drupal/content-model/layout-paragraphs/practice-align-content-entity-keys-with-base-fields.md)
+- Related: [practice-define-layout-plugins-by-complexity](/drupal/content-model/layout-paragraphs/practice-define-layout-plugins-by-complexity.md)
+<!-- kk:related:end -->
+
+<!-- kk:citations:start -->
+# Citations
+
+[1] [https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Section.php/class/Section/11.x](https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Section.php/class/Section/11.x)
+[2] [https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21SectionComponent.php/class/SectionComponent/11.x](https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21SectionComponent.php/class/SectionComponent/11.x)
+[3] [https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21DefaultsSectionStorage.php/class/DefaultsSectionStorage/11.x](https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21DefaultsSectionStorage.php/class/DefaultsSectionStorage/11.x)
+[4] [https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21OverridesSectionStorage.php/class/OverridesSectionStorage/11.x](https://api.drupal.org/api/drupal/core%21modules%21layout_builder%21src%21Plugin%21SectionStorage%21OverridesSectionStorage.php/class/OverridesSectionStorage/11.x)
+<!-- kk:citations:end -->

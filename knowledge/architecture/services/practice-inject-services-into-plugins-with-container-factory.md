@@ -1,28 +1,47 @@
 ---
-schema_version: 2
-id: practice-inject-services-into-plugins-with-container-factory
+type: practice
 title: Inject services into plugins with ContainerFactoryPluginInterface
-kind: practice
+description: >-
+  Plugins that need services should use create() and constructor injection
+  instead of static Drupal service calls.
 tags:
   - drupal
   - plugins
   - dependency-injection
-derived_from:
-  - https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/dependency-injection-in-plugin-block
-  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Plugin%21ContainerFactoryPluginInterface.php/interface/ContainerFactoryPluginInterface/11.x
-  - https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-entity-dependencies
-relates_to:
+kk_schema_version: 3
+kk_id: practice-inject-services-into-plugins-with-container-factory
+kk_derived_from:
+  - >-
+    https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/dependency-injection-in-plugin-block
+  - >-
+    https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Plugin%21ContainerFactoryPluginInterface.php/interface/ContainerFactoryPluginInterface/11.x
+  - >-
+    https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-entity-dependencies
+kk_relates_to:
   - map-derivative-plugins-generate-dynamic-plugin-instances
   - map-drupal-mail-flow
   - practice-alter-and-debug-plugin-definitions-through-managers
-depends_on: []
-confidence: high
-summary: >-
-  Plugins that need services should use create() and constructor injection
-  instead of static Drupal service calls.
+kk_depends_on: []
+kk_confidence: high
 ---
 Plugins that need Drupal services should implement `ContainerFactoryPluginInterface` and provide a static `create()` method. The plugin manager passes configuration, plugin ID, and plugin definition, while the container supplies services.
 
 Use constructor property promotion for injected services and prefer `private readonly` dependencies.
 
 Avoid static calls such as `\Drupal::entityTypeManager()` inside plugins. Plugins that depend on config entities can also implement `calculateDependencies()` so uninstall and configuration synchronization handle those dependencies correctly.
+
+<!-- kk:related:start -->
+# Related
+
+- Related: [map-derivative-plugins-generate-dynamic-plugin-instances](/drupal/architecture/plugins/map-derivative-plugins-generate-dynamic-plugin-instances.md)
+- Related: [map-drupal-mail-flow](/drupal/architecture/services/map-drupal-mail-flow.md)
+- Related: [practice-alter-and-debug-plugin-definitions-through-managers](/drupal/quality/practice-alter-and-debug-plugin-definitions-through-managers.md)
+<!-- kk:related:end -->
+
+<!-- kk:citations:start -->
+# Citations
+
+[1] [https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/dependency-injection-in-plugin-block](https://www.drupal.org/docs/drupal-apis/services-and-dependency-injection/dependency-injection-in-plugin-block)
+[2] [https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Plugin%21ContainerFactoryPluginInterface.php/interface/ContainerFactoryPluginInterface/11.x](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Plugin%21ContainerFactoryPluginInterface.php/interface/ContainerFactoryPluginInterface/11.x)
+[3] [https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-entity-dependencies](https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-entity-dependencies)
+<!-- kk:citations:end -->

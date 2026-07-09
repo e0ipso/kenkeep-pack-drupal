@@ -1,29 +1,49 @@
 ---
-schema_version: 2
-id: map-non-form-render-element-types
+type: map
 title: Non-form render element types
-kind: map
+description: >-
+  Drupal provides non-form render elements for common output structures in
+  controllers and preprocess code.
 tags:
   - drupal
   - render
   - elements
-derived_from:
-  - https://api.drupal.org/api/drupal/elements/11.x
-  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21HtmlTag.php/class/HtmlTag/11.x
-  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21Link.php/class/Link/11.x
-  - https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21RenderElementBase.php/class/RenderElementBase/11.x
-relates_to:
+kk_schema_version: 3
+kk_id: map-non-form-render-element-types
+kk_derived_from:
+  - 'https://api.drupal.org/api/drupal/elements/11.x'
+  - >-
+    https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21HtmlTag.php/class/HtmlTag/11.x
+  - >-
+    https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21Link.php/class/Link/11.x
+  - >-
+    https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21RenderElementBase.php/class/RenderElementBase/11.x
+kk_relates_to:
   - practice-build-render-arrays-with-cache-metadata
   - practice-define-layout-plugins-by-complexity
   - practice-use-cacheable-dependencies-for-render-cache-metadata
-depends_on: []
-confidence: medium
-summary: >-
-  Drupal provides non-form render elements for common output structures in
-  controllers and preprocess code.
+kk_depends_on: []
+kk_confidence: medium
 ---
 Non-form render elements are used anywhere render arrays are returned, including controllers and preprocess functions. Common element types include `html_tag`, `inline_template`, `container`, `link`, `more_link`, `status_messages`, `pager`, `dropbutton`, and `operations`.
 
 Use `#markup`, `#plain_text`, `#prefix`, and `#suffix` as shortcuts when no dedicated `#type` is needed. Use `#theme` to invoke a custom Twig template registered with `hook_theme()`.
 
 Important constraints from the reference: `#markup` and `html_tag` values are XSS-filtered unless trusted markup is used, Twig context variables are auto-escaped, `link` requires a `Drupal\Core\Url` object, and lazy builder arguments must be scalar values only.
+
+<!-- kk:related:start -->
+# Related
+
+- Related: [practice-build-render-arrays-with-cache-metadata](/drupal/data-cache/cache-render/practice-build-render-arrays-with-cache-metadata.md)
+- Related: [practice-define-layout-plugins-by-complexity](/drupal/content-model/layout-paragraphs/practice-define-layout-plugins-by-complexity.md)
+- Related: [practice-use-cacheable-dependencies-for-render-cache-metadata](/drupal/data-cache/cache-render/practice-use-cacheable-dependencies-for-render-cache-metadata.md)
+<!-- kk:related:end -->
+
+<!-- kk:citations:start -->
+# Citations
+
+[1] [https://api.drupal.org/api/drupal/elements/11.x](https://api.drupal.org/api/drupal/elements/11.x)
+[2] [https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21HtmlTag.php/class/HtmlTag/11.x](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21HtmlTag.php/class/HtmlTag/11.x)
+[3] [https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21Link.php/class/Link/11.x](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21Link.php/class/Link/11.x)
+[4] [https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21RenderElementBase.php/class/RenderElementBase/11.x](https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Render%21Element%21RenderElementBase.php/class/RenderElementBase/11.x)
+<!-- kk:citations:end -->
