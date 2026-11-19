@@ -1,9 +1,9 @@
 ---
 type: practice
-title: 'Use JSON:API for entity CRUD'
+title: 'Use JSON:API for entity CRUD when the site enables it'
 description: >-
-  JSON:API exposes entity collection, item, relationship, upload, filter,
-  include, sort, and pagination endpoints.
+  When the site enables core JSON:API, it exposes entity collection, item,
+  relationship, upload, filter, include, sort, and pagination endpoints.
 tags:
   - http
   - jsonapi
@@ -26,9 +26,11 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-Use Drupal core JSON:API for entity CRUD over `/jsonapi/{entity_type}/{bundle}` and `/jsonapi/{entity_type}/{bundle}/{uuid}`. The documented operations cover GET, POST, PATCH, and DELETE for article nodes, plus relationship endpoints for reading, adding, replacing, and removing related resources.
+If the site already enables the core JSON:API module, use it for entity CRUD over `/jsonapi/{entity_type}/{bundle}` and `/jsonapi/{entity_type}/{bundle}/{uuid}`. The documented operations cover GET, POST, PATCH, and DELETE for article nodes, plus relationship endpoints for reading, adding, replacing, and removing related resources.
 
 Keep JSON:API request details aligned with the documented gotchas: item paths use UUIDs rather than entity IDs, write requests should include `Content-Type: application/vnd.api+json`, file uploads use `application/octet-stream`, and filter access should be controlled with `hook_jsonapi_entity_filter_access()`, `hook_jsonapi_ENTITY_TYPE_filter_access()`, or `hook_jsonapi_entity_field_filter_access()`. JSON:API Extras is the contrib option for custom resource paths, disabled resources, field aliases, and enhancers.
+
+JSON:API exposes entities without module code, so a contrib module does not need it to make its entities available. Do not add a dependency on `jsonapi` or `jsonapi_extras` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it.
 
 <!-- kk:related:start -->
 # Related

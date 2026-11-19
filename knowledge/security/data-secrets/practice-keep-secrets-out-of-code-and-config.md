@@ -2,8 +2,8 @@
 type: practice
 title: Keep secrets out of code and exported config
 description: >-
-  Use environment variables, settings overrides, Key module, or Vault instead of
-  committed secrets.
+  Read secrets from environment variables, settings overrides, or a secret store
+  the site already runs, never from committed code or config.
 tags:
   - security
   - secrets
@@ -24,11 +24,11 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-Secrets belong in environment variables, uncommitted `settings.php` overrides, Drupal Key module, or a Vault-backed key provider, not in PHP code or exported configuration.
+Secrets belong in environment variables or uncommitted `settings.php` overrides, or in the Key module or a Vault-backed key provider when the site already uses one. They do not belong in PHP code or exported configuration.
 
 Database credentials and API keys should be environment-specific and read from the environment or a key repository at runtime. `settings.php` or `settings.local.php` can override sensitive config outside version control.
 
-Support rotation through versioned or date-based key names, and audit secret access without logging the secret values themselves. Production deployments should use Vault where available.
+Support rotation through versioned or date-based key names, and audit secret access without logging the secret values themselves. Sites that already run Vault should use it for production secrets. A contrib module should accept secrets through settings overrides and make Key or Vault support optional. Do not add a dependency on `key` or `vault` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it.
 
 <!-- kk:related:start -->
 # Related

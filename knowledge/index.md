@@ -10,6 +10,7 @@
 - Load [`apis/`](apis/index.md) for more information on HTTP APIs and serialization surfaces; read before exposing JSON:API, JSON-RPC, REST, or normalizer behavior.
 - Load [`architecture/`](architecture/index.md) for more information on Drupal extension architecture; read when wiring services, plugins, hooks, events, or dependency injection.
 - Load [`content-model/`](content-model/index.md) for more information on content entities, fields, layout, media, paragraphs, search, and SEO content structures; read before modeling Drupal content.
+- Load [`contrib/`](contrib/index.md) for more information on contributed module development: core version ranges, drupal.org GitLab CI, ddev-drupal-contrib, dependencies, deprecations, patches, and default config; read before writing or changing a module that other sites install.
 - Load [`data-cache/`](data-cache/index.md) for more information on cache metadata, render caching, state, config, storage, and database rules; read before persisting or caching data.
 - Load [`presentation/`](presentation/index.md) for more information on forms, routes, menus, AJAX, frontend assets, theme output, and user-facing UI behavior; read before building Drupal UI.
 - Load [`processing/`](processing/index.md) for more information on queues, cron, batch, workflow moderation, and long-running processing; read before adding background or state-transition work.

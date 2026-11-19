@@ -14,6 +14,7 @@ kk_derived_from:
   - >-
     https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests
   - 'https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal'
+  - 'https://github.com/ddev/ddev-drupal-contrib'
 kk_relates_to:
   - practice-quality-choose-lightest-drupal-test-type
   - map-processing-workflow-moderation-map
@@ -21,7 +22,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-When running PHPUnit during local iteration, scope the command to the module under test, such as `web/modules/custom/mymodule`, and choose the relevant suite with `--testsuite=unit`, `--testsuite=kernel`, or `--testsuite=functional`.
+When running PHPUnit during local iteration, scope the command to the module under test, such as `web/modules/custom/mymodule` or `web/modules/contrib/mymodule` on a site, or use `ddev phpunit` in a contrib module checkout that uses ddev-drupal-contrib, and choose the relevant suite with `--testsuite=unit`, `--testsuite=kernel`, or `--testsuite=functional`.
 
 Use `--filter` for a specific test or method and `--stop-on-failure` when iterating on failures. Full-suite runs still belong in CI, release validation, or core-wide regression checks.
 
@@ -38,4 +39,5 @@ Use `--filter` for a specific test or method and `--stop-on-failure` when iterat
 
 [1] [https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests](https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests)
 [2] [https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal](https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal)
+[3] [https://github.com/ddev/ddev-drupal-contrib](https://github.com/ddev/ddev-drupal-contrib)
 <!-- kk:citations:end -->

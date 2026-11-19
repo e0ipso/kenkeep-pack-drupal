@@ -30,7 +30,7 @@ Layout Builder is the core Drupal module for visual page assembly, placing drag-
 
 Layout Builder stores default layouts on entity view display configuration through `DefaultsSectionStorage`; per-entity layouts use `OverridesSectionStorage` and entity field storage. A `Section` contains the layout plugin, layout settings, and `SectionComponent` block instances assigned to regions.
 
-Enable it from `/admin/structure/types/manage/{type}/display` by turning on `Use Layout Builder`; only enable per-content customization when individual entity overrides are needed.
+On a site, enable it from `/admin/structure/types/manage/{type}/display` by turning on `Use Layout Builder`; only enable per-content customization when individual entity overrides are needed.
 
 <!-- kk:related:start -->
 # Related

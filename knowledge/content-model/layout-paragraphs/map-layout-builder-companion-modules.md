@@ -8,6 +8,7 @@ tags:
   - drupal
   - layout
   - modules
+  - site-architecture
 kk_schema_version: 3
 kk_id: map-layout-builder-companion-modules
 kk_derived_from:

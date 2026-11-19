@@ -8,6 +8,7 @@ tags:
   - drupal
   - paragraphs
   - performance
+  - site-architecture
 kk_schema_version: 3
 kk_id: practice-keep-paragraphs-depth-and-revisions-under-control
 kk_derived_from:

@@ -22,7 +22,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-Use `drupal/pathauto` to manage SEO-friendly aliases. Custom alias type plugins extend `AliasTypeBase` and are discovered with `@AliasType` annotations, including id, label, types, and context definitions. Implement `getSourcePrefix()` and `applies()` for the target entity or object.
+If the project already uses `drupal/pathauto` to manage SEO-friendly aliases, extend it as follows. Do not add a dependency on `pathauto` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it. Custom alias type plugins extend `AliasTypeBase` and are discovered with `@AliasType` annotations, including id, label, types, and context definitions. Implement `getSourcePrefix()` and `applies()` for the target entity or object.
 
 Configure tokenized patterns at `/admin/config/search/path/patterns`, such as `[node:content-type]/[node:title]`, and use `/admin/help/token` for token discovery. Programmatically create or update aliases through the `pathauto.generator` service with `createEntityAlias($entity, 'insert')` or `updateEntityAlias($entity, 'update')`. Bulk generation is available at `/admin/config/search/path/update_bulk`; transliteration and punctuation behavior are configuration choices, not assumptions to hard-code. Pathauto plugin discovery is annotation-based, not PHP 8 attributes.
 
