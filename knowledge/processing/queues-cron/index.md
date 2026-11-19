@@ -37,7 +37,7 @@ _None yet._
 ### #api
 - Open [**Delete queue items only after successful processing**](practice-processing-queue-api-operations.md) — Manual Drupal queue code must explicitly create, claim, delete, release, and count items; claimed items remain until deleted or released.
 - Open [**Search API concepts and extension points**](../../content-model/media-seo-search/map-search-api-concepts-and-extension-points.md) — Search API indexes content through indexes, servers, datasources, and processors.
-- Open [**Use JSON-RPC for business logic**](../../apis/practice-use-jsonrpc-for-business-logic.md) — JSON-RPC is the documented fit for actions, workflows, batch operations, and other non-REST business behavior.
+- Open [**Use JSON-RPC for business logic when the project already uses it**](../../apis/practice-use-jsonrpc-for-business-logic.md) — In projects that already use the contrib JSON-RPC module, it is the documented fit for actions, workflows, batch operations, and other non-REST behavior.
 ### #batch
 - Open [**Use Drupal Batch API with sandbox progress and a finished callback**](practice-processing-batch-api-pattern.md) — Long-running browser-initiated processing should be modeled as a Drupal batch with chunked operations, sandbox progress, user-facing messages, and a final success/error callback.
 ### #locks

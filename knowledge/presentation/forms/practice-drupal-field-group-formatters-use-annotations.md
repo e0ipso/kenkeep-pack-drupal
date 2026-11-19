@@ -23,7 +23,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-Use the drupal/field_group module when grouping fields on forms or view displays. Custom formatters live under src/Plugin/field_group/FieldGroupFormatter/ and are discovered with @FieldGroupFormatter annotations, not PHP 8 attributes. Set supported_contexts to form, view, or both. Formatter preRender() can alter the render element, for example converting a group to details and applying settings such as open. Programmatic groups are saved with field_group_group_save() and include entity_type, bundle, mode, context, parent_name, weight, format_type, children, and format_settings. Groups are stored as third-party settings on entity form or view display config, and nested groups are supported.
+If the project already uses the drupal/field_group module to group fields on forms or view displays, extend it as follows. Do not add a dependency on `field_group` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it. Custom formatters live under src/Plugin/field_group/FieldGroupFormatter/ and are discovered with @FieldGroupFormatter annotations, not PHP 8 attributes. Set supported_contexts to form, view, or both. Formatter preRender() can alter the render element, for example converting a group to details and applying settings such as open. Programmatic groups are saved with field_group_group_save() and include entity_type, bundle, mode, context, parent_name, weight, format_type, children, and format_settings. Groups are stored as third-party settings on entity form or view display config, and nested groups are supported.
 
 <!-- kk:related:start -->
 # Related

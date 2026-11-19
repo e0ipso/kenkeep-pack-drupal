@@ -21,9 +21,9 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-Use `drupal/metatag` for SEO metadata. Custom tag plugins are discovered with `@MetatagTag` annotations and can extend bases such as `MetaNameBase`; custom admin grouping uses `@MetatagGroup` annotations and `GroupBase`. Groups organize tags in the admin UI. For image metadata, set the tag type to `image`.
+If the project already uses `drupal/metatag` for SEO metadata, extend it as follows. Do not add a dependency on `metatag` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it. Custom tag plugins are discovered with `@MetatagTag` annotations and can extend bases such as `MetaNameBase`; custom admin grouping uses `@MetatagGroup` annotations and `GroupBase`. Groups organize tags in the admin UI. For image metadata, set the tag type to `image`.
 
-For Schema.org structured data, use the `schema_metatag` project or a purpose-built Metatag integration rather than treating Google Scholar tags as the general Schema.org solution. Programmatic consumers should use the `metatag.manager` service and `tagsFromEntityWithDefaults($entity)` to obtain entity tags with defaults applied. Metatag plugin discovery is annotation-based, not PHP 8 attributes.
+For Schema.org structured data in a project that uses Metatag, use the `schema_metatag` project or a purpose-built Metatag integration rather than treating Google Scholar tags as the general Schema.org solution. Programmatic consumers should use the `metatag.manager` service and `tagsFromEntityWithDefaults($entity)` to obtain entity tags with defaults applied. Metatag plugin discovery is annotation-based, not PHP 8 attributes.
 
 <!-- kk:related:start -->
 # Related

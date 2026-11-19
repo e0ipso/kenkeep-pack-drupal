@@ -24,7 +24,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-Use drupal/redirect to create and manage HTTP redirects. Programmatic redirects are Redirect entities with redirect_source, redirect_redirect, and status_code; source paths should omit the leading slash, while destinations can use forms such as internal:/path or entity:node/1. For lookups, prefer the redirect.repository service methods such as findBySourcePath() or findMatchingRedirect(). To customize redirect handling, subscribe to RedirectEvents::REDIRECT and inspect or modify the RedirectEvent. Enable the redirect_404 submodule when 404 handling should feed redirect creation or management.
+If the project already uses drupal/redirect to create and manage HTTP redirects, work with it as follows. Do not add a dependency on `redirect` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it. Programmatic redirects are Redirect entities with redirect_source, redirect_redirect, and status_code; source paths should omit the leading slash, while destinations can use forms such as internal:/path or entity:node/1. For lookups, prefer the redirect.repository service methods such as findBySourcePath() or findMatchingRedirect(). To customize redirect handling, subscribe to RedirectEvents::REDIRECT and inspect or modify the RedirectEvent. Enable the redirect_404 submodule when 404 handling should feed redirect creation or management.
 
 <!-- kk:related:start -->
 # Related

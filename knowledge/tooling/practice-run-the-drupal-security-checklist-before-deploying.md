@@ -8,7 +8,7 @@ tags:
   - security
   - deployment
   - checklist
-  - drupal
+  - site-architecture
 kk_schema_version: 3
 kk_id: practice-run-the-drupal-security-checklist-before-deploying
 kk_derived_from:

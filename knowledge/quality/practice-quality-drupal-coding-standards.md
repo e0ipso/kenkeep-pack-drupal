@@ -1,9 +1,10 @@
 ---
 type: practice
-title: Use Drupal PHPCS and PHPStan for custom module quality
+title: Use Drupal PHPCS and PHPStan for module quality
 description: >-
-  Custom Drupal module code should be checked with Drupal and DrupalPractice
-  PHPCS standards plus PHPStan, with level 5 or higher preferred for new code.
+  Custom and contrib Drupal module code should be checked with Drupal and
+  DrupalPractice PHPCS standards plus PHPStan, preferably level 5 or higher for
+  new code.
 tags:
   - quality
   - drupal
@@ -22,7 +23,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-For custom Drupal modules, install `drupal/coder` and run PHPCS with `--standard=Drupal,DrupalPractice` against `web/modules/custom/mymodule`; use `phpcbf` with the same standards for automatic fixes. Add PHPStan with `phpstan/phpstan` and `mglaman/phpstan-drupal`, configure `phpstan.neon` for a project-agreed level, `paths: web/modules/custom`, and `drupal_root: web`, and run analysis against the module. Keep docblocks, parameter and return type hints, no trailing whitespace, final newlines, and Drupal coding-standard line limits. A pre-commit hook can run Drupal PHPCS over custom modules. Treat `DrupalPractice` findings as important Drupal-specific guidance, and use `@phpstan-ignore-next-line` sparingly.
+For Drupal modules, install `drupal/coder` and run PHPCS with `--standard=Drupal,DrupalPractice` against the module path, such as `web/modules/custom/mymodule` on a site; use `phpcbf` with the same standards for automatic fixes. Add PHPStan with `phpstan/phpstan` and `mglaman/phpstan-drupal`, configure `phpstan.neon` for a project-agreed level, `paths` set to the module directory, and `drupal_root: web`, and run analysis against the module. In a contrib module checkout, `ddev phpcs`, `ddev phpcbf` and `ddev phpstan` from ddev-drupal-contrib run the same tools, and the drupal.org GitLab CI templates run phpcs and phpstan in each pipeline unless the project skips them. Keep docblocks, parameter and return type hints, no trailing whitespace, final newlines, and Drupal coding-standard line limits. A pre-commit hook can run Drupal PHPCS over the module. Treat `DrupalPractice` findings as important Drupal-specific guidance, and use `@phpstan-ignore-next-line` sparingly.
 
 <!-- kk:related:start -->
 # Related

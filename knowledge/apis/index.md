@@ -11,8 +11,8 @@ _None._
 
 ## Conventions (how we build)
 - Open [**Guard JSON-RPC entity CRUD access**](practice-guard-jsonrpc-entity-crud-access.md) to learn about: JSON-RPC CRUD methods should combine permission attributes, runtime entity checks, accessCheck, and current-user checks. #http #jsonrpc #crud #access
-- Open [**Use JSON-RPC for business logic**](practice-use-jsonrpc-for-business-logic.md) to learn about: JSON-RPC is the documented fit for actions, workflows, batch operations, and other non-REST business behavior. #http #jsonrpc #api #workflow
-- Open [**Use JSON:API for entity CRUD**](practice-use-jsonapi-for-entity-crud.md) to learn about: JSON:API exposes entity collection, item, relationship, upload, filter, include, sort, and pagination endpoints. #http #jsonapi #entities #crud
+- Open [**Use JSON-RPC for business logic when the project already uses it**](practice-use-jsonrpc-for-business-logic.md) to learn about: In projects that already use the contrib JSON-RPC module, it is the documented fit for actions, workflows, batch operations, and other non-REST behavior. #http #jsonrpc #api #workflow
+- Open [**Use JSON:API for entity CRUD when the site enables it**](practice-use-jsonapi-for-entity-crud.md) to learn about: When the site enables core JSON:API, it exposes entity collection, item, relationship, upload, filter, include, sort, and pagination endpoints. #http #jsonapi #entities #crud
 - Open [**Secure every API endpoint before processing**](practice-secure-api-endpoints.md) to learn about: Authenticate, authorize, validate, rate limit, and avoid exposing internals in API responses. #security #api #validation #auth
 - Open [**Tag custom normalizers explicitly**](practice-tag-custom-normalizers-explicitly.md) to learn about: Custom serialization normalizers need an explicit normalizer service tag with priority. #http #serialization #services
 - Open [**Validate JSON-RPC business methods**](practice-validate-jsonrpc-business-methods.md) to learn about: Advanced JSON-RPC methods should validate transitions, limits, file inputs, and storage errors explicitly. #http #jsonrpc #validation #errors
@@ -34,10 +34,10 @@ _None._
 ### #api
 - Open [**Delete queue items only after successful processing**](../processing/queues-cron/practice-processing-queue-api-operations.md) — Manual Drupal queue code must explicitly create, claim, delete, release, and count items; claimed items remain until deleted or released.
 - Open [**Search API concepts and extension points**](../content-model/media-seo-search/map-search-api-concepts-and-extension-points.md) — Search API indexes content through indexes, servers, datasources, and processors.
-- Open [**Use JSON-RPC for business logic**](practice-use-jsonrpc-for-business-logic.md) — JSON-RPC is the documented fit for actions, workflows, batch operations, and other non-REST business behavior.
+- Open [**Use JSON-RPC for business logic when the project already uses it**](practice-use-jsonrpc-for-business-logic.md) — In projects that already use the contrib JSON-RPC module, it is the documented fit for actions, workflows, batch operations, and other non-REST behavior.
 ### #crud
 - Open [**Guard JSON-RPC entity CRUD access**](practice-guard-jsonrpc-entity-crud-access.md) — JSON-RPC CRUD methods should combine permission attributes, runtime entity checks, accessCheck, and current-user checks.
-- Open [**Use JSON:API for entity CRUD**](practice-use-jsonapi-for-entity-crud.md) — JSON:API exposes entity collection, item, relationship, upload, filter, include, sort, and pagination endpoints.
+- Open [**Use JSON:API for entity CRUD when the site enables it**](practice-use-jsonapi-for-entity-crud.md) — When the site enables core JSON:API, it exposes entity collection, item, relationship, upload, filter, include, sort, and pagination endpoints.
 ### #plugins
 - Open [**Derivative plugins generate dynamic plugin instances**](../architecture/plugins/map-derivative-plugins-generate-dynamic-plugin-instances.md) — A deriver creates multiple plugin definitions from one base plugin using dynamic data.
 - Open [**Drupal mail flow**](../architecture/services/map-drupal-mail-flow.md) — MailManager builds messages with hook_mail(), resolves a mail plugin, formats the body, and sends or captures output.
@@ -59,7 +59,7 @@ _None._
 ### #errors
 - Open [**Validate JSON-RPC business methods**](practice-validate-jsonrpc-business-methods.md) — Advanced JSON-RPC methods should validate transitions, limits, file inputs, and storage errors explicitly.
 ### #jsonapi
-- Open [**Use JSON:API for entity CRUD**](practice-use-jsonapi-for-entity-crud.md) — JSON:API exposes entity collection, item, relationship, upload, filter, include, sort, and pagination endpoints.
+- Open [**Use JSON:API for entity CRUD when the site enables it**](practice-use-jsonapi-for-entity-crud.md) — When the site enables core JSON:API, it exposes entity collection, item, relationship, upload, filter, include, sort, and pagination endpoints.
 ### #rest
 - Open [**REST resources are ResourceBase plugins**](map-rest-resource-plugins.md) — Custom REST endpoints live as Plugin\\rest\\resource classes with RestResource attributes and resource config.
 ### #security

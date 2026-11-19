@@ -14,7 +14,7 @@ _None._
 - Open [**Handle Drush command IO and failures explicitly**](practice-handle-drush-command-io-and-failures-explicitly.md) to learn about: Use Symfony or Drush output helpers, confirmations, structured rows, batches, validation, and exit codes for CLI behavior. #drush #commands #cli
 - Open [**Use autowired Symfony Console Drush commands**](practice-use-autowired-attribute-drush-commands.md) to learn about: Build Drush 13.7+/14 commands with Symfony Console attributes, AutowireTrait, and constructor injection. #drush #commands #php #di
 - Open [**Keep install hooks for install-time work**](practice-keep-install-hooks-for-install-time-work.md) to learn about: Use module install hooks for install/uninstall tasks, non-entity schemas, and requirements, not later schema updates. #drupal #install #modules
-- Open [**Run the Drupal security checklist before deploying**](practice-run-the-drupal-security-checklist-before-deploying.md) to learn about: Verify validation, database safety, escaping, access control, files, secrets, APIs, and infra. #security #deployment #checklist #drupal
+- Open [**Run the Drupal security checklist before deploying**](practice-run-the-drupal-security-checklist-before-deploying.md) to learn about: Verify validation, database safety, escaping, access control, files, secrets, APIs, and infra. #security #deployment #checklist #site-architecture
 - Open [**Use update hooks for schema and post updates for data**](practice-use-update-hooks-for-schema-and-post-updates-for-data.md) to learn about: Schema changes belong in numbered hook_update_N functions; data changes belong in named post updates. #drupal #updates #schema
 
 ## Components (what exists)

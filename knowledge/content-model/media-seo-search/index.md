@@ -46,7 +46,7 @@ _None._
 ### #api
 - Open [**Delete queue items only after successful processing**](../../processing/queues-cron/practice-processing-queue-api-operations.md) — Manual Drupal queue code must explicitly create, claim, delete, release, and count items; claimed items remain until deleted or released.
 - Open [**Search API concepts and extension points**](map-search-api-concepts-and-extension-points.md) — Search API indexes content through indexes, servers, datasources, and processors.
-- Open [**Use JSON-RPC for business logic**](../../apis/practice-use-jsonrpc-for-business-logic.md) — JSON-RPC is the documented fit for actions, workflows, batch operations, and other non-REST business behavior.
+- Open [**Use JSON-RPC for business logic when the project already uses it**](../../apis/practice-use-jsonrpc-for-business-logic.md) — In projects that already use the contrib JSON-RPC module, it is the documented fit for actions, workflows, batch operations, and other non-REST behavior.
 ### #architecture
 - Open [**Keep business logic out of entity classes**](../entities-fields/practice-keep-business-logic-out-of-entity-classes.md) — Put domain behavior in Typed Entity wrappers instead of scattering it through entity classes or direct field mutations.
 - Open [**Media Library uses state, openers, and add forms**](map-media-library-three-component-architecture.md) — Media Library selection is organized around MediaLibraryState, opener services, and AddFormBase implementations.

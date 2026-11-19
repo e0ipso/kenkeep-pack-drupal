@@ -28,7 +28,7 @@ Secrets belong in environment variables, uncommitted `settings.php` overrides, D
 
 Database credentials and API keys should be environment-specific and read from the environment or a key repository at runtime. `settings.php` or `settings.local.php` can override sensitive config outside version control.
 
-Support rotation through versioned or date-based key names, and audit secret access without logging the secret values themselves. Production deployments should use Vault where available.
+Support rotation through versioned or date-based key names, and audit secret access without logging the secret values themselves. Sites that already run Vault should use it for production secrets. A contrib module must not require Key, Vault or another secret store; let the site supply secrets through settings overrides or an optional integration.
 
 <!-- kk:related:start -->
 # Related

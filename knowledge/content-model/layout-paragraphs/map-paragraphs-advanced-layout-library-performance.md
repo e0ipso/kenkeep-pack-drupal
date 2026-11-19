@@ -8,6 +8,7 @@ tags:
   - drupal
   - paragraphs
   - layout
+  - site-architecture
 kk_schema_version: 3
 kk_id: map-paragraphs-advanced-layout-library-performance
 kk_derived_from:

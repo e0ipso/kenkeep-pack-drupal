@@ -25,7 +25,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-For module behavior, common Drupal test bases increase in integration cost: `UnitTestCase` is fast and does not use a database, `KernelTestBase` boots Drupal services and uses a database, `BrowserTestBase` installs Drupal for browser-level HTTP behavior, and `WebDriverTestBase`/FunctionalJS adds a JavaScript-capable browser. Prefer the lightest type that can cover the behavior under test. Run module tests with `vendor/bin/phpunit web/modules/custom/mymodule`, target individual tests with `--filter`, run suites such as `unit` or `kernel` with `--testsuite`, and generate coverage with `--coverage-html reports/` when needed.
+For module behavior, common Drupal test bases increase in integration cost: `UnitTestCase` is fast and does not use a database, `KernelTestBase` boots Drupal services and uses a database, `BrowserTestBase` installs Drupal for browser-level HTTP behavior, and `WebDriverTestBase`/FunctionalJS adds a JavaScript-capable browser. Prefer the lightest type that can cover the behavior under test. Run module tests with `vendor/bin/phpunit <module-path>`, where `<module-path>` is the module directory, such as `web/modules/custom/mymodule` or `web/modules/contrib/mymodule` on a site; in a contrib module checkout that uses ddev-drupal-contrib, run `ddev phpunit`. Target individual tests with `--filter`, run suites such as `unit` or `kernel` with `--testsuite`, and generate coverage with `--coverage-html reports/` when needed.
 
 <!-- kk:related:start -->
 # Related

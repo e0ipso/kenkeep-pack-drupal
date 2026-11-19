@@ -8,6 +8,7 @@ tags:
   - drupal
   - paragraphs
   - revisions
+  - site-architecture
 kk_schema_version: 3
 kk_id: practice-use-entity-reference-revisions-for-paragraph-fields
 kk_derived_from:
@@ -20,7 +21,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-Use Entity Reference Revisions for Paragraphs fields rather than standard entity references. A standard entity reference stores `target_id`; ERR stores both `target_id` and `target_revision_id` so the host revision can reference the intended paragraph revision.
+When a site uses Paragraphs, use Entity Reference Revisions for Paragraphs fields rather than standard entity references. A standard entity reference stores `target_id`; ERR stores both `target_id` and `target_revision_id` so the host revision can reference the intended paragraph revision.
 
 This matters because paragraph revision tracking cascades from the host revision to the child paragraph revision. Loading `$item->entity` from the field item resolves the specific referenced paragraph revision.
 

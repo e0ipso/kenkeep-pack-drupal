@@ -23,7 +23,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-Use Paragraphs behavior plugins to extend paragraph functionality without subclassing. A behavior plugin can add configuration fields through `buildBehaviorForm()` and apply behavior during render alteration or preprocessing.
+When the project uses Paragraphs, use behavior plugins to extend paragraph functionality without subclassing. Do not add a dependency on `paragraphs` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it. A behavior plugin can add configuration fields through `buildBehaviorForm()` and apply behavior during render alteration or preprocessing.
 
 Enable behaviors per paragraph type at `/admin/structure/paragraphs_type/{type}`. Behavior settings are stored on each paragraph entity in the serialized `behavior_settings` base field.
 
