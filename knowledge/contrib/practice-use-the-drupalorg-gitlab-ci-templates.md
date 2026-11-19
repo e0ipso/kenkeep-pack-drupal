@@ -25,7 +25,7 @@ kk_confidence: high
 ---
 For a contrib module hosted on drupal.org, use the Drupal Association GitLab CI templates instead of writing pipeline jobs by hand. Add one `.gitlab-ci.yml` file to the project root: select `template.gitlab-ci.yml` from the template list when you add the file in the GitLab UI, or copy it from `gitlab-ci/template.gitlab-ci.yml` in the `gitlab_templates` project. That file includes `include.drupalci.main.yml`, `include.drupalci.variables.yml` and `include.drupalci.workflows.yml`, which define the jobs.
 
-The validation jobs are composer-lint, cspell, eslint, phpcs, phpstan, secret detection and stylelint. The testing jobs include phpunit, nightwatch, test-only changes and upgrade status. Jobs for the current core version run by default. Turn a job off with its `SKIP_*` variable, such as `SKIP_PHPCS: 1` or `SKIP_CSPELL: 1`, only when the module has a documented reason. Turn on other core versions with the `OPT_IN_TEST_*` variables.
+The validation jobs are composer-lint, cspell, eslint, phpcs, phpstan, secret detection and stylelint. The testing jobs include phpunit, nightwatch, test-only changes and upgrade status. Each job has its own run condition. phpcs and cspell run unless `SKIP_PHPCS` or `SKIP_CSPELL` is `'1'`. phpstan and phpunit run for the current core version (`OPT_IN_TEST_CURRENT`) unless `SKIP_PHPSTAN` or `SKIP_PHPUNIT` is `'1'`. Upgrade status and secret detection run only when `RUN_JOB_UPGRADE_STATUS` or `RUN_JOB_SECRET_DETECTION` is `'1'`. Skip a job only when the module has a documented reason. Turn on other core versions with the `OPT_IN_TEST_*` variables.
 
 Fix the code so the jobs pass. Do not change the included template files, and do not skip a failing job to make the pipeline green.
 

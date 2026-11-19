@@ -14,6 +14,7 @@ kk_derived_from:
   - >-
     https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests
   - 'https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal'
+  - 'https://github.com/ddev/ddev-drupal-contrib'
 kk_relates_to:
   - practice-quality-choose-lightest-drupal-test-type
   - map-processing-workflow-moderation-map
@@ -38,4 +39,5 @@ Use `--filter` for a specific test or method and `--stop-on-failure` when iterat
 
 [1] [https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests](https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests)
 [2] [https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal](https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal)
+[3] [https://github.com/ddev/ddev-drupal-contrib](https://github.com/ddev/ddev-drupal-contrib)
 <!-- kk:citations:end -->

@@ -10,7 +10,7 @@
 _None._
 
 ## Conventions (how we build)
-- Open [**Keep secrets out of code and exported config**](practice-keep-secrets-out-of-code-and-config.md) to learn about: Use environment variables, settings overrides, Key module, or Vault instead of committed secrets. #security #secrets #config #drupal
+- Open [**Keep secrets out of code and exported config**](practice-keep-secrets-out-of-code-and-config.md) to learn about: Read secrets from environment variables, settings overrides, or a secret store the site already runs, never from committed code or config. #security #secrets #config #drupal
 - Open [**Prevent SQL injection with safe query APIs**](practice-prevent-sql-injection-with-safe-query-apis.md) to learn about: Prefer Entity Query and parameterized Database API calls; never concatenate user input into SQL. #security #sql #database #drupal
 
 ## Components (what exists)
@@ -35,6 +35,6 @@ _None yet._
 - Open [**Use Database API sparingly for custom tables**](../../data-cache/database/practice-use-database-api-sparingly-for-custom-tables.md) — Use Database API only for non-entity tables, complex joins, migrations, or rare SQL-specific performance needs.
 - Open [**Secure custom table queries**](../input-output/practice-secure-custom-table-queries.md) — Use placeholders, escape LIKE patterns, and whitelist dynamic table names in custom SQL work.
 ### #secrets
-- Open [**Keep secrets out of code and exported config**](practice-keep-secrets-out-of-code-and-config.md) — Use environment variables, settings overrides, Key module, or Vault instead of committed secrets.
+- Open [**Keep secrets out of code and exported config**](practice-keep-secrets-out-of-code-and-config.md) — Read secrets from environment variables, settings overrides, or a secret store the site already runs, never from committed code or config.
 ### #sql
 - Open [**Prevent SQL injection with safe query APIs**](practice-prevent-sql-injection-with-safe-query-apis.md) — Prefer Entity Query and parameterized Database API calls; never concatenate user input into SQL.

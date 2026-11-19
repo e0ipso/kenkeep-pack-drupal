@@ -23,6 +23,8 @@ kk_confidence: high
 ---
 When a site uses Paragraphs, use Entity Reference Revisions for Paragraphs fields rather than standard entity references. A standard entity reference stores `target_id`; ERR stores both `target_id` and `target_revision_id` so the host revision can reference the intended paragraph revision.
 
+Paragraphs already depends on Entity Reference Revisions. Do not add a dependency on `paragraphs` or `entity_reference_revisions` only because this node recommends it. In a contrib module, declare `entity_reference_revisions` directly only when the module's own code uses its API.
+
 This matters because paragraph revision tracking cascades from the host revision to the child paragraph revision. Loading `$item->entity` from the field item resolves the specific referenced paragraph revision.
 
 <!-- kk:related:start -->

@@ -3,7 +3,7 @@ type: practice
 title: Develop contrib modules locally with ddev-drupal-contrib
 description: >-
   The ddev-drupal-contrib add-on builds a Drupal site around a module checkout
-  and runs the same quality tools as drupal.org CI.
+  and runs many of the quality tools that drupal.org CI runs.
 tags:
   - contrib
   - ddev
@@ -31,7 +31,7 @@ ddev symlink-project
 
 `ddev poser` writes a temporary `composer.contrib.json` that adds `drupal/core-recommended` as a development dependency and runs `composer update`; it does not change the module's own `composer.json`. `ddev symlink-project` links the module files into the site, by default under `web/modules/custom`.
 
-Run checks with the add-on commands: `ddev phpunit`, `ddev phpcs`, `ddev phpcbf`, `ddev phpstan`, `ddev eslint`, `ddev stylelint` and `ddev nightwatch`. To test against another core version, run `ddev core-version ^10` (or set `DRUPAL_CORE` in `.ddev/.env.web`, then run `ddev restart` and `ddev poser`). Do not commit the generated site files, such as `web/` and `vendor/`, to the module repository.
+Run checks with the add-on commands: `ddev phpunit`, `ddev phpcs`, `ddev phpcbf`, `ddev phpstan`, `ddev eslint` and `ddev stylelint`. `ddev nightwatch` also needs the DDEV Selenium Standalone Chrome add-on. These commands cover many of the drupal.org CI jobs, but a passing local run does not guarantee a passing pipeline. To test against another core version, run `ddev core-version ^10` (or set `DRUPAL_CORE` in `.ddev/.env.web`, then run `ddev restart` and `ddev poser`). Do not commit the generated site files, such as `web/` and `vendor/`, to the module repository.
 
 <!-- kk:related:start -->
 # Related

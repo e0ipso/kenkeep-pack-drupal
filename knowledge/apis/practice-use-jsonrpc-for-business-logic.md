@@ -25,7 +25,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: high
 ---
-If the project already uses the contributed JSON-RPC module, use JSON:API for entity CRUD and JSON-RPC for business logic that does not fit REST, such as cache clearing, workflows, and batch operations. Do not add a dependency on `jsonrpc` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it. JSON-RPC provides the `/jsonrpc` endpoint, JSON Schema parameter validation, and batch requests; method discovery at `/jsonrpc/methods` is provided by the `jsonrpc_discovery` submodule.
+If the project already uses the contributed JSON-RPC module, use it for business logic that does not fit REST, such as cache clearing, workflows, and batch operations. If the site also enables core JSON:API, keep entity CRUD in JSON:API and use JSON-RPC for the rest. Do not add a dependency on `jsonrpc` only because this node recommends it. In a contrib module, add it only when the module's own feature cannot work without it. JSON-RPC provides the `/jsonrpc` endpoint, JSON Schema parameter validation, and batch requests; method discovery at `/jsonrpc/methods` is provided by the `jsonrpc_discovery` submodule.
 
 Define methods with `JsonRpcMethodBase`, `#[JsonRpcMethod]`, `JsonRpcParameterDefinition`, and `JsonRpcObject\ParameterBag`. Represent expected client failures with JSON-RPC errors such as `Error::invalidParams()`, and use method-level `access` metadata for required permissions when access can be expressed declaratively.
 

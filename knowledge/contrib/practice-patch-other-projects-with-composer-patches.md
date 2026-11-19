@@ -21,7 +21,7 @@ kk_relates_to:
 kk_depends_on: []
 kk_confidence: medium
 ---
-Do not edit files of Drupal core or another project in `web/core`, `web/modules/contrib` or `vendor`. Composer replaces those files on the next install or update, and the change is lost. Open or find an issue in the upstream project, put the fix in a merge request or patch there, and apply the patch with `cweagans/composer-patches`:
+Do not edit files of Drupal core or another project in `web/core`, `web/modules/contrib` or `vendor`. Composer replaces those files on the next install or update, and the change is lost. Open or find an issue in the upstream project, put the fix in a merge request or patch there, and apply the patch with `cweagans/composer-patches` in the root `composer.json` of the site or local development environment:
 
 ```json
 "extra": {
@@ -33,7 +33,7 @@ Do not edit files of Drupal core or another project in `web/core`, `web/modules/
 }
 ```
 
-Keep the patch file in the repository instead of a remote URL, because a remote patch can change. Core patches apply at patch level `-p2`.
+The path is relative to that root project. Keep the patch file in the repository instead of a remote URL, because a remote patch can change. drupal.org documents that core patches apply at patch level `-p2`.
 
 In a contrib module, do not rely on a patch in the module's own `composer.json`: whether a site applies patches from its dependencies depends on that site's Composer setup. Write the module so it works with released versions of its dependencies. If it needs an upstream fix, depend on a release that contains it, or add a workaround in the module's own code and link the upstream issue.
 

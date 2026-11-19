@@ -18,6 +18,7 @@ kk_derived_from:
     https://www.drupal.org/docs/develop/automated-testing/types-of-tests-in-drupal
   - >-
     https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests
+  - 'https://github.com/ddev/ddev-drupal-contrib'
 kk_relates_to:
   - practice-quality-drupal-functional-browser-tests
   - practice-quality-drupal-unit-kernel-tests
@@ -41,4 +42,5 @@ For module behavior, common Drupal test bases increase in integration cost: `Uni
 [1] [https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal](https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal)
 [2] [https://www.drupal.org/docs/develop/automated-testing/types-of-tests-in-drupal](https://www.drupal.org/docs/develop/automated-testing/types-of-tests-in-drupal)
 [3] [https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests](https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal/running-phpunit-tests)
+[4] [https://github.com/ddev/ddev-drupal-contrib](https://github.com/ddev/ddev-drupal-contrib)
 <!-- kk:citations:end -->
