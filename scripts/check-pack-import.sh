@@ -2,19 +2,21 @@
 set -euo pipefail
 
 pack_root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+kenkeep="$pack_root/node_modules/.bin/kenkeep"
 test_root=$(mktemp -d)
 trap 'rm -rf "$test_root"' EXIT
 
 mkdir "$test_root/consumer"
 cd "$test_root/consumer"
 git init --quiet
-npx --yes kenkeep@1.19.4 init --harnesses claude
+"$kenkeep" init --harnesses claude
 git add .ai .claude .kkignore AGENTS.md
 git -c user.name='Pack import test' -c user.email='pack-test@example.com' \
   -c commit.gpgsign=false commit --quiet -m 'Initialize test consumer'
 
-# Import the checkout under test, rather than the latest published release.
-if ! npx --yes kenkeep@1.19.4 pack import "$pack_root" > "$test_root/import.log" 2>&1; then
+# Import the checkout under test with the locked kenkeep version, rather than
+# the latest published release.
+if ! "$kenkeep" pack import "$pack_root" > "$test_root/import.log" 2>&1; then
   cat "$test_root/import.log"
   exit 1
 fi
