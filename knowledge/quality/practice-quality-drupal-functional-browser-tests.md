@@ -1,10 +1,10 @@
 ---
 type: practice
-title: Use Drupal functional tests for browser-level behavior
+title: Use Drupal Functional tests as the default test tier
 description: >-
-  Functional tests should cover page rendering, form submissions, and access
-  control with BrowserTestBase, reserving WebDriverTestBase for
-  JavaScript-dependent behavior.
+  BrowserTestBase is the default tier for routes, forms, access, rendered
+  output, and subsystems that work together; use WebDriverTestBase only when
+  the behavior needs JavaScript.
 tags:
   - quality
   - testing
@@ -20,18 +20,26 @@ kk_derived_from:
   - >-
     https://api.drupal.org/api/drupal/core%21tests%21Drupal%21FunctionalJavascriptTests%21WebDriverTestBase.php/class/WebDriverTestBase/11.x
 kk_relates_to:
-  - practice-quality-choose-lightest-drupal-test-type
+  - practice-quality-budget-test-assertions
+  - practice-quality-one-test-class-one-method-per-tier
+  - practice-quality-prefer-drupal-integration-tests
   - practice-quality-drupal-unit-kernel-tests
   - practice-quality-drupal-coding-standards
 kk_depends_on: []
 kk_confidence: high
 ---
-Functional Drupal tests extend `BrowserTestBase` and run a full Drupal installation in a test environment. Use them for behavior that requires browser-level interaction, such as page rendering, form submissions, and access control. Set `$defaultTheme`, list only the modules needed by the test, create and log in users with appropriate permissions, visit paths with `drupalGet()`, submit forms with `submitForm()`, and assert status codes, page text, elements, and field values through `assertSession()`. Use `WebDriverTestBase` only for JavaScript-dependent behavior such as AJAX forms, dynamic UI updates, or client-side validation, because it adds browser-driver cost. Scope functional tests to the module during local iteration.
+Functional Drupal tests extend `BrowserTestBase` and install a full Drupal site in a test environment. They are the default tier: use them for behavior that a site exercises, such as routes, forms, access, rendered output, or subsystems that work together. Set `$defaultTheme`, list only the modules that the test needs, create and log in users with the necessary permissions, visit paths with `drupalGet()`, submit forms with `submitForm()`, and assert status codes, page text, elements, and field values through `assertSession()`.
+
+Use `WebDriverTestBase` (FunctionalJavascript) only when the behavior needs JavaScript, such as AJAX forms, dynamic UI updates, or client-side validation. It adds the cost of a browser driver.
+
+Both tiers install Drupal for each test method and each data provider row. Do not use data providers in these tiers, and follow the one-class, one-method rule. Scope Functional tests to the module during local iteration.
 
 <!-- kk:related:start -->
 # Related
 
-- Related: [practice-quality-choose-lightest-drupal-test-type](/drupal/quality/practice-quality-choose-lightest-drupal-test-type.md)
+- Related: [practice-quality-budget-test-assertions](/drupal/quality/practice-quality-budget-test-assertions.md)
+- Related: [practice-quality-one-test-class-one-method-per-tier](/drupal/quality/practice-quality-one-test-class-one-method-per-tier.md)
+- Related: [practice-quality-prefer-drupal-integration-tests](/drupal/quality/practice-quality-prefer-drupal-integration-tests.md)
 - Related: [practice-quality-drupal-unit-kernel-tests](/drupal/quality/practice-quality-drupal-unit-kernel-tests.md)
 - Related: [practice-quality-drupal-coding-standards](/drupal/quality/practice-quality-drupal-coding-standards.md)
 <!-- kk:related:end -->
