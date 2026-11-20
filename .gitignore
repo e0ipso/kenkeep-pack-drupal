@@ -1,1 +1,3 @@
+node_modules/
+# Per-project tokens (GITHUB_TOKEN) for push and API calls; never commit them.
 /.env

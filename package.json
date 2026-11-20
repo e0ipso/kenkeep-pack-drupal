@@ -1,0 +1,27 @@
+{
+  "name": "kenkeep-pack-drupal",
+  "version": "2.2.0",
+  "private": true,
+  "description": "kenkeep knowledge pack with general knowledge and best practices for Drupal projects",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "check:pack": "bash scripts/check-pack-import.sh",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.3",
+    "@commitlint/types": "21.2.3",
+    "@semantic-release/changelog": "7.0.0",
+    "@semantic-release/exec": "7.1.0",
+    "@semantic-release/git": "11.0.1",
+    "conventional-changelog-conventionalcommits": "9.3.1",
+    "husky": "9.1.7",
+    "kenkeep": "1.19.4",
+    "semantic-release": "25.0.9"
+  }
+}
