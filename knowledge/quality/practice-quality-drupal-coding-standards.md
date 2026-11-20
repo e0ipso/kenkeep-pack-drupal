@@ -19,7 +19,7 @@ kk_derived_from:
   - 'https://github.com/ddev/ddev-drupal-contrib'
   - 'https://project.pages.drupalcode.org/gitlab_templates/jobs/'
 kk_relates_to:
-  - practice-quality-choose-lightest-drupal-test-type
+  - practice-quality-prefer-drupal-integration-tests
   - practice-quality-drupal-functional-browser-tests
   - practice-quality-drupal-unit-kernel-tests
 kk_depends_on: []
@@ -30,7 +30,7 @@ For Drupal modules, install `drupal/coder` and run PHPCS with `--standard=Drupal
 <!-- kk:related:start -->
 # Related
 
-- Related: [practice-quality-choose-lightest-drupal-test-type](/drupal/quality/practice-quality-choose-lightest-drupal-test-type.md)
+- Related: [practice-quality-prefer-drupal-integration-tests](/drupal/quality/practice-quality-prefer-drupal-integration-tests.md)
 - Related: [practice-quality-drupal-functional-browser-tests](/drupal/quality/practice-quality-drupal-functional-browser-tests.md)
 - Related: [practice-quality-drupal-unit-kernel-tests](/drupal/quality/practice-quality-drupal-unit-kernel-tests.md)
 <!-- kk:related:end -->

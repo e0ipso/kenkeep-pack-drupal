@@ -16,7 +16,7 @@ kk_derived_from:
   - 'https://www.drupal.org/docs/develop/automated-testing/phpunit-in-drupal'
   - 'https://github.com/ddev/ddev-drupal-contrib'
 kk_relates_to:
-  - practice-quality-choose-lightest-drupal-test-type
+  - practice-quality-prefer-drupal-integration-tests
   - map-processing-workflow-moderation-map
   - practice-keep-debugging-code-out-of-commits
 kk_depends_on: []
@@ -29,7 +29,7 @@ Use `--filter` for a specific test or method and `--stop-on-failure` when iterat
 <!-- kk:related:start -->
 # Related
 
-- Related: [practice-quality-choose-lightest-drupal-test-type](/drupal/quality/practice-quality-choose-lightest-drupal-test-type.md)
+- Related: [practice-quality-prefer-drupal-integration-tests](/drupal/quality/practice-quality-prefer-drupal-integration-tests.md)
 - Related: [map-processing-workflow-moderation-map](/drupal/processing/workflows/map-processing-workflow-moderation-map.md)
 - Related: [practice-keep-debugging-code-out-of-commits](/drupal/quality/practice-keep-debugging-code-out-of-commits.md)
 <!-- kk:related:end -->
